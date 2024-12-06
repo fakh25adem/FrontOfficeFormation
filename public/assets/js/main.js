@@ -202,27 +202,51 @@
                 },
             }
         });
-
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const testimonialContent = document.getElementById('testimonial-content');
+      
+        let currentSlideIndex = 0;
+      
+        function updateTestimonial() {
+          const currentSlide = slides[currentSlideIndex];
+          testimonialContent.textContent = currentSlide.dataset.text;
+        }
+      
+        nextButton.addEventListener('click', () => {
+          if (currentSlideIndex < slides.length - 1) {
+            currentSlideIndex++;
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            updateTestimonial();
+          }
+        });
+      
+        prevButton.addEventListener('click', () => {
+          if (currentSlideIndex > 0) {
+            currentSlideIndex--;
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            updateTestimonial();
+          }
+        });
+      
+        // Initialisation
+        updateTestimonial();
         /*------------------------------------------------
             institute-slider
         ------------------------------------------------*/
         $('.institute-slider').owlCarousel({
-            loop: true,
-            margin: 30,
+            loop: false,
+            margin: 10,
             nav: false,
             dots: false,
-            smartSpeed: 1500,
             responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                992: {
-                    items: 5
-                },
-            }
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 4 } // Affiche 4 icônes
+              }
         });
 
         /*------------------------------------------------

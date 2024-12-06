@@ -8,25 +8,21 @@ class Footer_v2 extends Component {
 		const minscript = document.createElement("script");
 		minscript.async = true;
 		minscript.src = publicUrl + "assets/js/main.js";
-
-		document.body.appendChild(minscript);
 	}
-
 	render() {
-
 		let publicUrl = process.env.PUBLIC_URL + '/'
 		let imgattr = "Footer logo"
+		return (   
+						<footer className="footer-area footer-area-2 bg-gray">
 
-		return (
-			<footer className="footer-area footer-area-2 bg-gray">
 				<div className="footer-top">
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_about text-center">
-									<a href="index.html"><img src={publicUrl + "assets/img/logo-3.png"} alt="img" /></a>
+									<a href="index.html"><img src={publicUrl + "assets/img/logo3.png"} alt="img" /></a>
 									<div className="details">
-										<p>Edumint tetur sadipscing elitr tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+										<p>Nous pensons fermement que votre participation à l’une de nos formations serait bénéfique pour vous, alors n’hésitez pas de nous contacter pour toute information complémentaire.</p>
 										<ul className="social-media">
 											<li><a href="https://www.facebook.com/solverwp/"><i className="fa fa-facebook" /></a></li>
 											<li><a href="https://www.twitter.com/solverwp"><i className="fa fa-twitter" /></a></li>
@@ -40,24 +36,11 @@ class Footer_v2 extends Component {
 								<div className="widget widget_contact">
 									<h4 className="widget-title">Contact Us</h4>
 									<ul className="details">
-										<li><i className="fa fa-map-marker" /> 420 Love Sreet 133/2 Street NewYork</li>
-										<li><i className="fa fa-envelope" /> info.contact@gmail.com</li>
-										<li><i className="fa fa-phone" /> 012 345 678 9101</li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-lg-3 col-md-6">
-								<div className="widget widget_blog_list">
-									<h4 className="widget-title">News &amp; Blog</h4>
-									<ul>
-										<li>
-											<h6><Link to="/blog-details">Big Ideas Of Business Branding Info.</Link></h6>
-											<span className="date"><i className="fa fa-calendar" />December 7, 2021</span>
-										</li>
-										<li>
-											<h6><Link to="/blog-details">Ui/Ux Ideas Of Business Branding Info.</Link></h6>
-											<span className="date"><i className="fa fa-calendar" />December 7, 2021</span>
-										</li>
+									<li><i className="fa fa-phone" />  (+216) 71 90 54 29</li>
+									<li><i className="fa fa-fax" />  (+216) 71 90 54 30</li>
+									<li><i className="fa fa-envelope" /> contact@exifod.com</li>
+									<li><i className="fa fa-map-marker" /> Complexe Khaireddine Pacha bloc A bureau A24- Montplaisir 1073 TUNIS</li>
+										
 									</ul>
 								</div>
 							</div>
@@ -65,36 +48,23 @@ class Footer_v2 extends Component {
 								<div className="widget widget_nav_menu">
 									<h4 className="widget-title">Course</h4>
 									<ul className="go-top">
-										<li><Link to="/blog">Branding design</Link></li>
-										<li><Link to="/blog">Ui/Ux designing </Link></li>
-										<li><Link to="/blog">Make Elements</Link></li>
-										<li><Link to="/blog">Business</Link></li>
-										<li><Link to="/blog">Graphics design</Link></li>
+										<li><Link to="/blog">Accueil</Link></li>
+										<li><Link to="/blog">Domaine D'expertise </Link></li>
+										<li><Link to="/blog">Nos Formations</Link></li>
+										<li><Link to="/blog">Fiches Métiers</Link></li>
+										<li><Link to="/blog">Cértification</Link></li>
+										<li><Link to="/blog">Actualités</Link></li>
+										<li><Link to="/blog">Consulting</Link></li>
+
 									</ul>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
-				<div className="footer-bottom">
-					<div className="container">
-						<div className="row">
-							<div className="col-md-5 align-self-center">
-								<p>Copyright 2022 by solverwp.com</p>
-							</div>
-							<div className="col-md-7 text-md-right align-self-center mt-md-0 mt-2">
-								<div className="widget_nav_menu">
-									<ul className="go-top">
-										<li><Link to="/">Home</Link></li>
-										<li><Link to="/about">About Us</Link></li>
-										<li><Link to="/pricing">Our Pricing</Link></li>
-										<li><Link to="/blog">blog</Link></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
+				
 			</footer>
 
 		)

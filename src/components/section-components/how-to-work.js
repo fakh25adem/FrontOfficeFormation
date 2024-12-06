@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import CountUp from 'react-countup'; // Import de la bibliothèque pour le compteur
+
 import parse from 'html-react-parser';
 
 class HowToWork extends Component {
@@ -8,75 +10,68 @@ class HowToWork extends Component {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
-    return <div className="work-area pd-top-110 go-top">
+    return <div className="work-area pd-top-110 go-top" style={{backgroundImage: 'url('+publicUrl+'assets/img/banner/background.jpeg)',
+																backgroundSize: 'cover', // Pour couvrir toute la largeur
+    															backgroundRepeat: 'no-repeat', // Empêche la répétition
+    															backgroundPosition: 'center'}} >
+																
+  
 			  <div className="container">
-			    <div className="section-title">
-			      <div className="row">
-			        <div className="col-lg-6 align-self-center">
-			          <h6 className="sub-title right-line">What we do</h6>
-			          <h2 className="title">How it works?</h2>
-			        </div>
-			        <div className="col-lg-6 align-self-center">
-			          <p className="content mt-lg-0">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs when MTV ax quiz</p>
-			        </div>
-			      </div>
-			    </div>
+			  <div className='title'> 
+				<h1>Chiffre clés</h1>
+				</div>
+
 			    <div className="row">
+					
 			      <div className="col-lg-3 col-md-6">
 			        <div className="single-intro-inner style-icon-bg bg-gray text-center">
 			          <div className="thumb">
-			            <img src={publicUrl+"assets/img/icon/12.png"} alt="img" />
-			            <div className="intro-count">1</div>
+			            <img src={publicUrl+"assets/img/icon/logo1.png"} alt="img" />
 			          </div>
 			          <div className="details">
-			            <h5>Sign up</h5>
-			            <p>Ipsum yorem dolor amet sit  elit. Duis at est id leosco for it</p>
-			            <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+			            <h5><CountUp start={0} end={94532} duration={3} separator="" />			</h5>
+			            <p>Nos experts formateurs
+						</p>
 			          </div>
 			        </div>
 			      </div>
 			      <div className="col-lg-3 col-md-6">
 			        <div className="single-intro-inner style-icon-bg bg-gray text-center">
 			          <div className="thumb">
-			            <img src={publicUrl+"assets/img/icon/13.png"} alt="img" />
-			            <div className="intro-count">2</div>
+			            <img src={publicUrl+"assets/img/icon/logo2.png"} alt="img" />
 			          </div>
 			          <div className="details">
-			            <h5>Select course</h5>
-			            <p>Ipsum yorem dolor amet sit  elit. Duis at est id leosco for it</p>
-			            <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+					  <h5><CountUp start={0} end={94532} duration={3} separator="" />			</h5>
+					  <p>Nos domaines d’interventions</p>
 			          </div>
 			        </div>
 			      </div>
 			      <div className="col-lg-3 col-md-6">
 			        <div className="single-intro-inner style-icon-bg bg-gray text-center">
 			          <div className="thumb">
-			            <img src={publicUrl+"assets/img/icon/14.png"} alt="img" />
-			            <div className="intro-count">3</div>
+			            <img src={publicUrl+"assets/img/icon/logo3.png"} alt="img" />
 			          </div>
 			          <div className="details">
-			            <h5>Start Learning</h5>
-			            <p>Ipsum yorem dolor amet sit  elit. Duis at est id leosco for it</p>
-			            <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+					  <h5><CountUp start={0} end={94532} duration={3} separator="" />			</h5>
+					  <p>Taux de réussite</p>
 			          </div>
 			        </div>
 			      </div>
 			      <div className="col-lg-3 col-md-6">
 			        <div className="single-intro-inner style-icon-bg bg-gray text-center">
 			          <div className="thumb">
-			            <img src={publicUrl+"assets/img/icon/15.png"} alt="img" />
-			            <div className="intro-count">4</div>
+			            <img src={publicUrl+"assets/img/icon/logo4.png"} alt="img" />
 			          </div>
 			          <div className="details">
-			            <h5>Get Certificate</h5>
-			            <p>Ipsum yorem dolor amet sit  elit. Duis at est id leosco for it</p>
-			            <Link className="read-more-text" to="/course-details">Read More <i className="fa fa-angle-right" /></Link>
+					  <h5><CountUp start={0} end={94532} duration={3} separator="" />			</h5>
+					  <p>Taux de satisfactions</p>
 			          </div>
 			        </div>
 			      </div>
 			    </div>
 			  </div>
 			</div>
+			
         }
 }
 
