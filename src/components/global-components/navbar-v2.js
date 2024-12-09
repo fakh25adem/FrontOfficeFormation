@@ -20,6 +20,7 @@ class NavbarV2 extends Component {
 			          <ul>
 			            <li><p><i className="fa fa-phone" /> (+216) 71 90 54 90</p></li>
 			            <li><p><i className="fa fa-envelope-o" />  contact@exifod.com</p></li>
+						<li><a href={publicUrl+"assets/img/catalogue.pdf"}><p><i className="fa fa-download"></i> Télécharger le catalogue</p></a></li>
 			          </ul>
 			        </div>
 			        <div className="col-md-4">

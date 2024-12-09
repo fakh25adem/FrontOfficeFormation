@@ -184,7 +184,7 @@
         $('.team-slider').owlCarousel({
             loop: true,
             margin: 30,
-            nav: false,
+            nav: true,
             dots: false,
             smartSpeed: 1500,
             responsive: {
@@ -206,34 +206,37 @@
         const slides = Array.from(track.children);
         const nextButton = document.querySelector('.next');
         const prevButton = document.querySelector('.prev');
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        const testimonialContent = document.getElementById('testimonial-content');
       
         let currentSlideIndex = 0;
-      
-        function updateTestimonial() {
-          const currentSlide = slides[currentSlideIndex];
-          testimonialContent.textContent = currentSlide.dataset.text;
-        }
-      
-        nextButton.addEventListener('click', () => {
-          if (currentSlideIndex < slides.length - 1) {
-            currentSlideIndex++;
-            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-            updateTestimonial();
+        const slideWidth = slides[0].getBoundingClientRect().width;
+
+       
+        function moveToSlide(index) {
+            // Déplacer le track en fonction de l'index
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentSlideIndex = index;
+          
+            // Gestion des boutons (désactivation si nécessaire)
+            prevButton.disabled = currentSlideIndex === 0;
+            nextButton.disabled = currentSlideIndex === slides.length - 1;
           }
-        });
-      
-        prevButton.addEventListener('click', () => {
-          if (currentSlideIndex > 0) {
-            currentSlideIndex--;
-            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-            updateTestimonial();
-          }
-        });
-      
-        // Initialisation
-        updateTestimonial();
+          
+          // Gestion du bouton "Suivant"
+          nextButton.addEventListener('click', () => {
+            if (currentSlideIndex < slides.length - 1) {
+              moveToSlide(currentSlideIndex + 1);
+            }
+          });
+          
+          // Gestion du bouton "Précédent"
+          prevButton.addEventListener('click', () => {
+            if (currentSlideIndex > 0) {
+              moveToSlide(currentSlideIndex - 1);
+            }
+          });
+          
+          // Initialisation
+          moveToSlide(0);
         /*------------------------------------------------
             institute-slider
         ------------------------------------------------*/
