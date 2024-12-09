@@ -59,7 +59,12 @@ class Footer_v2 extends Component {
 									</ul>
 								</div>
 							</div>
-							
+							<div className="col-lg-3 col-md-6">
+
+							<div className="widget-g-map">
+		              			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d408825.9581162937!2d10.187985!3d36.819651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd348bce683b2b%3A0x7fe328c198cbe116!2s10%20Av.%20Abderrahmen%20Azzam%2C%20Tunis%201073%2C%20Tunisie!5e0!3m2!1sfr!2sus!4v1733499850970!5m2!1sfr!2sus" />
+		            		</div>
+							</div>
 						</div>
 					</div>
 				</div>
