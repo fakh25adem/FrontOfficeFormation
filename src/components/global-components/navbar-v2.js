@@ -93,8 +93,7 @@ class NavbarV2 extends Component {
 			            
 			          </li>
 					  <li className="menu-item-has-children">
-			            <Link to="/blog">Consulting</Link>
-			            
+			            	<Link to="/blog">Consulting</Link>
 			          </li>
 			        </ul>
 					

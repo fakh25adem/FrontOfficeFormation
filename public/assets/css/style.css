@@ -998,7 +998,130 @@ ul {
 .page-header2-area .page-list li:first-child:after {
   display: none;
 }
+/***page-header3 ***/
+.page-header3-area {
+  padding: 282px 0 250px;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.page-header3-area .page-header3-inner {
+  position: relative;
+  z-index: 2;
+}
+.page-header3-area .section-title {
+  display: flex; /* Active l'alignement horizontal entre les éléments */
+  align-items: center; /* Centre la ligne et le texte verticalement */
+}
+.page-header3-area .section-title::before {
+  content: '';
+  width: 2px; /* Épaisseur de la ligne */
+  height: 55px; /* Hauteur de la ligne */
+  background-color: #ffc107; /* Couleur jaune */
+  margin-right: 25px; /* Espacement entre la ligne et le texte */
+}
+.page-header3-area .page-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 1px;
+  color: #fff;
+  text-align: left;
+}
+
+.page-header3-area .page-list {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.page-header3-area .page-list li {
+  font-size: 18px;
+  font-weight: 200;
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  padding-left: 8px;
+}
+
+.page-header3-area .page-list li:after {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  content: "/";
+  font-family: "fontawesome";
+}
+
+.page-header3-area .page-list li:first-child {
+  padding-left: 0;
+}
+
+.page-header3-area .page-list li:first-child:after {
+  display: none;
+}
+.page-header3-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajustez l'opacité si nécessaire */
+  z-index: 1;
+}
+/*******************page-header4*********************/
+.page-header4-area {
+  padding: 282px 0 125px; /* Ajustez selon la hauteur souhaitée */
+  background-color: #1a1a1a; /* Couleur sombre */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.page-header4-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.page-header4-area .page-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff; /* Couleur jaune pour le titre */
+  text-align: left;
+}
+
+.page-header4-area .page-list {
+  margin-left: 250px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff; /* Couleur blanche pour le texte secondaire */
+  
+}
+.page-header4-area .section-title {
+  display: flex;
+  align-items: center;
+}
+
+.page-header4-area .section-title::before {
+  content: '';
+  width: 2.5px; /* Épaisseur de la ligne */
+  height: 65px; /* Hauteur de la ligne */
+  background-color: #ffc107; /* Couleur jaune */
+  margin-right: 25px; /* Espacement entre la ligne et le titre */
+}
+.page-header4-area .subtitle{
+  margin-top: 50px;
+  color: #fff;
+  text-align: center;
+
+}
 
     /* References Section Styling */
     .references-area {
@@ -1274,7 +1397,14 @@ ul {
 .pd-bottom-90 {
   padding-bottom: 90px;
 }
+.pd-bottom-10 {
+  padding-bottom: 15px;
 
+}
+.pd-bottom-20 {
+  padding-bottom: 20px;
+
+}
 .pd-bottom-100 {
   padding-bottom: 100px;
 }
@@ -2024,7 +2154,7 @@ ul {
 }
 
 .navbar-area-2 {
-  background: rgba(0, 33, 71, 0.4);
+  background: rgb(0, 33, 71);
 }
 
 .navbar-area-2 .nav-container .navbar-collapse .navbar-nav>li>a {
@@ -2917,7 +3047,6 @@ ul {
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 33, 71, 0.9);
 }
 
 .banner-area-3 {
@@ -4855,16 +4984,53 @@ h2 {
   margin-bottom: 0;
 }
 
-.team-details-page span {
+.team-details-page p {
   display: block;
+  color: black;
 }
-
+.team-details-page p span {
+  font-weight: bold; /* Applique le style gras */
+  color: black;
+}
 .team-details-page .designation {
   color: var(--heading-color);
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 500;
 }
+.col-lg-4 img {
+  width: 100%; /* Maintain the same width as the column */
+  height: 400px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image scales properly without distortion */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/******* certification *********/
+.certification h3 {
+  font-size: 40px;
+  margin-bottom: 0;
+}
+.certification h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.certification span {
+  display: block;
+}
+
+.certification .designation {
+  color: var(--heading-color);
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+
+
 
 /******** blog-details-page-content ***********/
 .blog-details-page-content .single-blog-inner {

@@ -8,7 +8,25 @@ class BannerV2 extends Component {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
-    return  <div className="banner-area banner-area-2" style={{backgroundImage: 'url("'+publicUrl+'assets/img/banner/2.png")'}}>
+    return  <div className="banner-area banner-area-2" >
+		<video 
+    autoPlay 
+    muted 
+    loop 
+    playsInline 
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      zIndex: '-1',
+    }}
+  >
+    <source src={publicUrl + 'assets/img/banner/vd.mp4'} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 		  <div className="container">
 		    <div className="row">
 		        <div className="banner-inner style-white text-center text-lg-left">
