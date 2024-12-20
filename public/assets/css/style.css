@@ -657,6 +657,8 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: rgba(218, 216, 216, 0.5); /* Couleur grise avec opacité (0.5) */
+
 
 }
 .work-area .titleAbout {
@@ -3581,15 +3583,19 @@ ul {
 .single-testimonial-inner.style-white .testimonial-author .media-body p {
   color: #fff;
 }
-.testimonial-section {
+/* .testimonial-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto; /* Adapter automatiquement la hauteur au contenu */
+  height: auto; 
   padding: 40px 20px;
   width: 100%;
 
+} */
+.testimonial-section {
+  text-align: center;
+  padding: 20px;
 }
 
 h2 {
@@ -3600,191 +3606,118 @@ h2 {
 
 }
 
-.testimonial-carousel {
+/* .testimonial-carousel {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Nécessaire pour le positionnement absolu des flèches */
+  position: relative;
   width: 100%;
   text-align: center;
 
+} */
+.testimonial-section {
+  text-align: center;
+  padding: 20px;
 }
 
-.carousel-control {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0 200px;
-
-  transform: translateY(-50%); /* Ajuster pour centrer parfaitement */
-  z-index: 2; /* Assurez-vous qu'elles apparaissent au-dessus du contenu */
-
+.testimonial-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 .carousel-track-container {
   overflow: hidden;
-  scroll-snap-type: x mandatory; /* Activer le snap scrolling horizontal */
-  width: 700px; /* Ajustez selon vos besoins */
-  max-width: 90%; /* Prend 90% de l'espace pour éviter de toucher les bords */
-
+  width: 100%;
 }
 
 .carousel-track {
-  display:flex;
-  flex-direction: row;
-
-  scroll-snap-align: start; /* Chaque slide s'aligne au début */
-
-  transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
 .carousel-slide {
-  list-style: none;
- 
-  flex: 0 0 100%;
-  text-align: center;
-  padding: 20px; 
-  margin: 0 auto; /* Centre chaque slide */
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-slide img {
-  width: 100px; /* Augmentez si nécessaire */
-  height: 100px;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .carousel-slide h3 {
-  font-size: 20px;
+  font-size: 1.2rem;
   margin: 10px 0;
-  color: #252323;
 }
 
 .carousel-slide p {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 16px;
-  color: #777;
-}
-.carousel-slide .position {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 1rem;
   color: #555;
 }
 
-.testimonial-text {
-  max-width: 800px; /* Limite la largeur maximale */
-  margin: 0 auto; /* Centrer horizontalement */
-  padding: 20px; /* Ajouter un espace autour du texte */
-  font-size: 1rem; /* Taille de texte adaptée */
-  line-height: 1.8; /* Meilleure lisibilité */
-  text-align: left; /* Alignement centré */
+.testimonial-text p {
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: #666;
+  padding: 0 10px;
 }
 
-#testimonial-content {
-  font-size: 1.1rem;
-  color: #444;
-  margin: 20px 0;
-  text-align: left;
-}
-.testimonial-area-inner {
-  border-radius: 7px;
-  position: relative;
-  margin-top: 40px;
-}
-
-.testimonial-area-inner .testimonial-right-img {
-  position: absolute;
-  right: 20px;
-  bottom: 0;
-  height: 350px;
-}
-
-.testimonial-slider {
-  padding-right: 40%;
-}
-
-.testimonial-slider .owl-nav {
-  display: inline-block;
-  background: var(--main-color);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border-radius: 7px 0 7px 0;
-}
-
-.testimonial-slider .owl-nav button {
-  background: transparent;
-  border: 0;
-  padding: 4px 16px;
-  color: var(--heading-color);
-  font-size: 22px;
+.carousel-control {
+  top: 50%;
+  font-size: 2rem;
+  border: none;
   cursor: pointer;
+  background: transparent;  /* Supprime le fond gris */
+
 }
 
-.testimonial-slider-2 .owl-nav {
-  display: none;
+.carousel-control.prev {
+  left: 10px;
 }
 
-.testimonial-slider-2 .single-testimonial-inner {
-  margin: 0;
-  padding: 13px 0 0 0;
-  box-shadow: none;
+.carousel-control.next {
+  right: 10px;
 }
 
-.testimonial-slider-2 .single-testimonial-inner .testimonial-quote {
-  color: var(--main-color);
-  top: -20px;
-  left: auto;
-  right: 30px;
-  z-index: 1;
+@media (max-width: 768px) {
+  .carousel-slide img {
+    max-width: 120px;
+  }
+
+  .carousel-slide h3 {
+    font-size: 1rem;
+  }
+
+  .carousel-slide p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-text p {
+    font-size: 0.8rem;
+  }
 }
 
-.testimonial-slider-2 .single-testimonial-inner>p {
-  background-color: #fff;
-  font-size: 16px;
-  padding: 38px 30px;
-  position: relative;
-  border-radius: 5px;
-  margin-bottom: 32px;
-}
+@media (max-width: 480px) {
+  .carousel-slide {
+    padding: 15px;
+    max-width: 300px;
+  }
 
-.testimonial-slider-2 .single-testimonial-inner>p:after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 18px;
-  bottom: -18px;
-  left: 50px;
-  border-top: solid 18px #fff;
-  border-left: solid 18px transparent;
-  border-right: solid 18px transparent;
+  .carousel-control {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
 }
-
-.testimonial-slider-2 .single-testimonial-inner .testimonial-author {
-  margin-left: 30px;
-}
-
-.testimonial-slider-2 .single-testimonial-inner .testimonial-author img {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
-}
-
-.testimonial-slider-2 .single-testimonial-inner .testimonial-author .media-left {
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-}
-
-.testimonial-slider-3 .owl-nav {
-  display: none;
-}
-
 /************** single-team-inner **************/
 .single-team-inner {
   margin-bottom: 30px;
@@ -4033,27 +3966,30 @@ h2 {
  color: #000000;
 }
 
-.institute-slider {
+.fix {
   cursor: pointer;
   justify-content: space-between;
 
 }
-.institute-slider .item {
+.fix .item {
   flex-direction: column;
   align-items: center; /* Centre les éléments verticalement */
 }
-.institute-slider .item img {
+.fix .item img {
   display: block; /* Nécessaire pour centrer avec margin */
-  max-width: 40%;
+  width: 20px;
   width: auto;
   margin: auto;
   justify-content: center;
 
 }
-.institute-slider .item h4 {
+.fix .item h4 {
  text-align: center;
  color: #000000;
  justify-content: space-between;
+ font-size: 23px;
+ height: 47px;
+ margin-top: 13px;
 
 }
 

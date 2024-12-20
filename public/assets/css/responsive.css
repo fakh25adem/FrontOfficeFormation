@@ -310,7 +310,7 @@
   /* Responsive pour les écrans intermédiaires (tablettes) */
 @media all and (max-width: 1024px) {
 	.work-area .container {
-	  height: 400px; /* Réduction de la hauteur pour les tablettes */
+	  height: 400px; 
 	}
 	.work-area .titleAbout {
 	  text-align: center;
@@ -424,8 +424,8 @@
 	  }
 	
 	  .institute-slider .item h4 {
-		text-align: center; /* Centre le titre */
-		font-size: 1.2rem; /* Ajuste la taille du titre */
+		text-align: center; 
+		font-size: 1rem; 
 		margin-top: 10px;
 	  }
 	
