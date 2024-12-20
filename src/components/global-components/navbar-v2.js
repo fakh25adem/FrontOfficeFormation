@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const NavbarV2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,24 @@ const NavbarV2 = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const [domaines, setDomaines] = useState([]); // État pour stocker les données
+
+  useEffect(() => {
+	  axios
+	.get('http://localhost:4500/api/domaine/all') // Remplacer par votre endpoint exact
+	.then((response) => {
+	  setDomaines(response.data.data);
+	  console.log("domaine",response.data.data[0].
+		domaineNom
+		)
+
+	  console.log('Message donnée',response.data.data); 
+	  // Stocker les données dans l'état
+	})
+	.catch((error) => {
+	  console.error('Erreur lors de la récupération des Domaines:', error);
+	});
+}, []);
 
   useEffect(() => {
     const $ = window.$;
@@ -15,7 +34,7 @@ const NavbarV2 = () => {
 
   const publicUrl = process.env.PUBLIC_URL + "/";
   const imgattr = "logo";
-  const anchor = "#";
+ 
 
   return (
     <div className="navbar-area">
@@ -98,52 +117,52 @@ const NavbarV2 = () => {
                 <ul className="sub-menu">
                   <ul>
                     <li>
-                      <Link to="/course">
+                      <Link to="sousdomaine-dexpertise/1">
                         Projets et programmes <li>de développement</li>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/course-details">Oil & Gas</Link>
+                      <Link to="sousdomaine-dexpertise/2">Oil & Gas</Link>
                     </li>
                     <li>
-                      <Link to="/course-details">Développement durable</Link>
+                      <Link to="sousdomaine-dexpertise/3">Développement durable</Link>
                     </li>
                     <li>
-                      <Link to="/course-details">Changement climatique</Link>
+                      <Link to="sousdomaine-dexpertise/4">Changement climatique</Link>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Link to="/course">Passation des marchés</Link>
+                      <Link to="sousdomaine-dexpertise/5">Passation des marchés</Link>
                     </li>
                     <li>
-                      <Link to="/course-details">Finance et comptabilité</Link>
+                      <Link to="sousdomaine-dexpertise/6">Finance et comptabilité</Link>
                     </li>
                     <li>
-                      <Link to="/course-details">
+                      <Link to="sousdomaine-dexpertise/7">
                         Management des <li>ressources humaines</li>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/course-details">
+                      <Link to="sousdomaine-dexpertise/8">
                         Modernisation de <li>l'administration publique</li>
                       </Link>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Link to="/course">Finances publiques</Link>
+                      <Link to="sousdomaine-dexpertise/9">Finances publiques</Link>
                     </li>
                     <li>
-                      <Link to="/course-details">Santé publique</Link>
+                      <Link to="sousdomaine-dexpertise/10">Santé publique</Link>
                     </li>
                     <li>
-                      <Link to="/course-details">
+                      <Link to="sousdomaine-dexpertise/11">
                         Agriculture, nutrition <li>et sécurité alimentaire</li>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/course-details">
+                      <Link to="sousdomaine-dexpertise/12">
                         Wash (water, sanitation <li>and hygiene)</li>
                       </Link>
                     </li>
