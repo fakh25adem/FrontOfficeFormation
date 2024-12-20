@@ -9,7 +9,7 @@ class Page_header2 extends Component {
         let Subheader = this.props.subheader ? this.props.subheader : HeaderTitle
 
         return (
-	<div className="page-header2-area " >
+	<div className="page-header2-area pd-top-80" >
 	  <div className="container">
 	    <div className="page-header2-inner">
 	      <div className="section-title mb-0 text-center">

@@ -13,7 +13,7 @@ class AboutV2 extends Component {
 		   return <div className="work-area pd-top-110 go-top">
 		   <div className="container">
 			 <div className="section-title">
-				   <h2 className="titleAbout">Les piliers de notre pédagogie :</h2>
+				   <h3 className="titleAbout">Les piliers de notre pédagogie :</h3>
 			 </div>
 			 <div className="row ">
 			   <div className="col-lg-4 col-md-8">

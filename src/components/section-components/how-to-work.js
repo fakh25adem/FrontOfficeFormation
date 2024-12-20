@@ -10,13 +10,13 @@ class HowToWork extends Component {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
-    return <div className="work-area pd-top-110 go-top" style={{backgroundImage: 'url('+publicUrl+'assets/img/banner/background.jpeg)',
+    return <div className="work-area  go-top" style={{backgroundImage: 'url('+publicUrl+'assets/img/banner/background.jpeg)',
 																backgroundSize: 'cover', // Pour couvrir toute la largeur
     															backgroundRepeat: 'no-repeat', // Empêche la répétition
     															backgroundPosition: 'center'}} >
 																
   
-			  <div className="container">
+			  <div className="container1">
 			  <div className='title'> 
 				<h1>Chiffre clés</h1>
 				</div>

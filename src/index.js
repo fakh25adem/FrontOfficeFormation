@@ -18,8 +18,8 @@ import SignUp from './components/sign-up';
 import Contact from './components/contact';
 import Blog from './components/blog';
 import BlogDetails from './components/blog-details';
-
-
+import DomaineDexpertise from './components/domaine-dexpertise';
+import SousdomaineDexpertise from './components/sousdomaine-dexpertise';
 
 
 class Root extends Component {
@@ -45,6 +45,8 @@ class Root extends Component {
                         <Route path="/contact" component={Contact} />
                         <Route path="/blog" component={Blog} />
                         <Route path="/blog-details" component={BlogDetails} />
+                        <Route path="/domaine-dexpertise" component={DomaineDexpertise}  />
+                        <Route path="/sousdomaine-dexpertise/:idDomaine" component={SousdomaineDexpertise}/>
 	                </Switch>
 	                </div>
                 </HashRouter>

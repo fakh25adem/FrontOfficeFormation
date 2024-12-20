@@ -10,6 +10,7 @@ import PageHeader2 from './global-components/page-header2';
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
 
+
 const Home_V2 = () => {
     return <div>
         <Navbar />

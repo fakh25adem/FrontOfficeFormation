@@ -12,11 +12,11 @@ class Page_header3 extends Component {
         return (
 
 
-	<div className="page-header3-area " style={{backgroundImage: 'url('+publicUrl+'assets/img/institute/Eduma-cover-banner-17.jpg)'}} >
+	<div className="page-header3-area " style={{backgroundImage: 'url('+publicUrl+'assets/img/institute/Finances-publiques-et-Bonne-Gouvernance.jpeg)'}} >
 	  <div className="container">
 	    <div className="page-header3-inner">
 	      <div className="section-title ">
-	        <h2 className="page-title">Certifications</h2>
+	        <h2 className="page-title">{ HeaderTitle }</h2>
 	        <ul className="page-list">
 	        </ul>
 	      </div>

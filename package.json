@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "github:testing-library/jest-dom",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "github:testing-library/user-event",
+    "axios": "^1.7.9",
     "google-maps-react": "^2.0.2",
     "html-react-parser": "^0.10.5",
     "owl.carousel": "^2.3.4",

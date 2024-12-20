@@ -30,7 +30,7 @@ class BannerV2 extends Component {
 		  <div className="container">
 		    <div className="row">
 		        <div className="banner-inner style-white text-center text-lg-left">
-		          <h1 className="b-animate-2 title">Les Experts Internationaux</h1>
+		          <h1 className="b-animate-2 title text-center">Les Experts Internationaux</h1>
 				  <h3 className="b-animate-1 sub-title">Formation. Organisation. Développement</h3>
 		          <ul><Link className="btn btn-base b-animate-3 mr-sm-3 mr-2" to="/about">Découvrire</Link></ul>
 		        </div>

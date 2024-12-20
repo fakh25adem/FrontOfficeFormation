@@ -284,17 +284,182 @@
 	}
 }
 
+  @media all and (max-width: 1024px) {
+	.row.justify-content-center1 {
+	  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+	  margin: 0 auto; /* Centrage automatique */
+	  max-width: 90%; /* Réduction de la largeur pour éviter trop d'étirement */
+	}
+  }
+  
+  /* Responsive pour mobiles (petits écrans) */
+  @media all and (max-width: 768px) {
+	.row.justify-content-center1 {
+	  grid-template-columns: 1fr; /* 1 colonne */
+	  margin: 0 auto; /* Centrage automatique */
+	  gap: 15px; /* Espacement encore réduit */
+	  padding: 0 10px; /* Ajout d'un léger padding latéral */
+	  max-width: 100%;
+	}
+  }
+
+ 
+
+
+
+  /* Responsive pour les écrans intermédiaires (tablettes) */
+@media all and (max-width: 1024px) {
+	.work-area .container {
+	  height: 400px; /* Réduction de la hauteur pour les tablettes */
+	}
+	.work-area .titleAbout {
+	  text-align: center;
+	  padding: 20px; /* Ajoute un espace pour éviter la surcharge visuelle */
+	}
+	.work-area .container .title h1 {
+	  font-size: 28px; /* Taille de police réduite */
+	}
+  }
+  
+  /* Responsive pour les petits écrans (mobiles) */
+  @media all and  (max-width: 768px) {
+	.work-area .container {
+	  height: auto; /* Hauteur ajustée automatiquement */
+	  padding: 20px; /* Espacement autour du contenu */
+	}
+	.work-area .titleAbout {
+	  text-align: center;
+	  padding: 15px; /* Réduction de l'espacement */
+	}
+	.work-area .container .title h1 {
+	  font-size: 24px; /* Réduction de la taille de la police */
+	  line-height: 1.5; /* Ajustement pour une meilleure lisibilité */
+	}
+	.btn {
+	  margin-top: 20px; /* Réduction de l'espacement au-dessus du bouton */
+	}
+  }
+
+
+
+/* Pour les tablettes (max-width: 768px) */
+@media all and (max-width: 768px) {
+	.carousel-track-container {
+	  max-width: 100%; /* Prend toute la largeur disponible */
+	}
+  
+	.carousel-slide {
+	  flex: 0 0 95%; /* Plus petit espace sur les côtés */
+	}
+  
+	.carousel-slide img {
+	  width: 60px;
+	  height: 60px;
+	}
+  
+	.carousel-slide h3 {
+	  font-size: 16px;
+	}
+  
+	.carousel-slide p {
+	  font-size: 9px;
+	}
+  }
+  
+  /* Pour les smartphones (max-width: 480px) */
+  @media all and (max-width: 480px) {
+	h2 {
+	  font-size: 18px;
+	  margin-bottom: 10px;
+	}
+  
+	.carousel-slide img {
+	  width: 50px;
+	  height: 50px;
+	}
+  
+	.carousel-slide h3 {
+	  font-size: 14px;
+	}
+  
+	.carousel-slide p {
+	  font-size: 9px;
+	  margin:  0;
+	}
+  
+	.carousel-control {
+	  font-size: 18px;
+	}
+  }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+  @media all and (max-width: 768px) {
+	.institute-slider {
+	  gap: 15px; /* Réduit l'espacement entre les éléments */
+	}
+    .institute-slider .item img.marginImage {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 80%; /* Réduit encore la taille de l'image */
+	  }
+	.institute-slider .item {
+	  max-width: 45%; /* Permet à deux éléments de tenir côte à côte */
+	  margin-bottom: 20px;
+	}
+  
+	.institute-slider .item img {
+	  max-width: 80%; /* Réduction de la taille des images */
+	}
+  
+	.institute-slider .item p {
+	  font-size: 0.85rem; /* Réduit légèrement la taille du texte */
+	  padding: 10px;
+	}
+	.institute-slider .item img.marginImage {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 80%; /* Réduit légèrement la taille de l'image */
+	  }
+	
+	  .institute-slider .item h4 {
+		text-align: center; /* Centre le titre */
+		font-size: 1.2rem; /* Ajuste la taille du titre */
+		margin-top: 10px;
+	  }
+	
+	  .institute-slider .item {
+		text-align: center; /* Centre tout le contenu */
+		margin-bottom: 20px; /* Espacement entre les éléments */
+	  }
+  }
+  
+  /* Pour les smartphones (max-width: 480px) */
+  @media all and (max-width: 480px) {
+	.institute-slider {
+	  flex-direction: column; /* Tous les éléments passent en colonne */
+	  gap: 10px;
+	}
+    .institute-slider .item img.marginImage {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 70%; /* Réduit légèrement la taille de l'image */
+	  }
+	.institute-slider .item {
+	  max-width: 100%; /* Chaque élément prend toute la largeur disponible */
+	}
+  
+	.institute-slider .item img {
+	  max-width: 70%; /* Réduit encore la taille des images */
+	}
+  
+	.institute-slider .item h4 {
+	  font-size: 1rem; /* Ajuste la taille des titres */
+	}
+  
+	.institute-slider .item p {
+	  font-size: 0.8rem; /* Réduit davantage la taille du texte */
+	  padding: 8px;
+	}
+  }

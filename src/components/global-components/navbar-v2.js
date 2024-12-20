@@ -45,7 +45,7 @@ class NavbarV2 extends Component {
 			        </button>
 			      </div>
 			      <div className="logo">
-			        <Link to="/home-v2"><img src={publicUrl+"assets/img/exifod-logo-Blanc-png.png"} alt="img" /></Link>
+			        <Link to="/home-v2"><img src={publicUrl+"assets/img/logo3.png"} alt="img" /></Link>
 			      </div>
 			      <div className="collapse navbar-collapse" id="edumint_main_menu">
 			        <ul className="navbar-nav menu-open">
@@ -53,22 +53,21 @@ class NavbarV2 extends Component {
 			            <Link to="/home-v2">Accueil</Link>
 			          </li>
 			          <li className="menu-item-has-children">
-			            <Link to="/course">Domaine D'expertise</Link>
-			            <ul className="sub-menu">
-
-								<ul>
+			            <Link to="/domaine-dexpertise">Domaine D'expertise</Link>
+			            	<ul className="sub-menu">
+								<ul >
 				            		<li><Link to="/course">Projets et programmes <li>de développement</li></Link></li>
 	                        		<li><Link to="/course-details">Oil & Gas</Link></li>
 									<li><Link to="/course-details">Développement durable</Link></li>
 	                        		<li><Link to="/course-details">Changement climatique</Link></li>
 								</ul>
-								<ul>
+								<ul >
 				            		<li><Link to="/course">Passation des marchés</Link></li>
 	                        		<li><Link to="/course-details">Finance et comptabilité</Link></li>
 									<li><Link to="/course-details">Management des <li>ressources humaines</li></Link></li>
 	                        		<li><Link to="/course-details">Modernisation de <li>l'administration publique</li></Link></li>
 								</ul>
-								<ul>
+								<ul >
 				            		<li><Link to="/course">Finances publiques</Link></li>
 	                        		<li><Link to="/course-details">Santé publique</Link></li>
 									<li><Link to="/course-details">Agriculture, nutrition <li>et sécurité alimentaire</li></Link></li>

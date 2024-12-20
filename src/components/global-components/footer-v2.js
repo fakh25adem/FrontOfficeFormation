@@ -13,14 +13,14 @@ class Footer_v2 extends Component {
 		let publicUrl = process.env.PUBLIC_URL + '/'
 		let imgattr = "Footer logo"
 		return (   
-						<footer className="footer-area footer-area-2 bg-gray">
+						<footer className="footer-area footer-area-2 ">
 
 				<div className="footer-top">
 					<div className="container">
 						<div className="row">
 							<div className="col-lg-3 col-md-6">
-								<div className="widget widget_about text-center">
-									<a href="index.html"><img src={publicUrl + "assets/img/logo3.png"} alt="img" /></a>
+								<div className="widget widget_content">
+									<a href="index.html"><img src={publicUrl + "assets/img/exifod-logo-blanc-png.png"} alt="img" /></a>
 									<div className="details">
 										<p>Nous pensons fermement que votre participation à l’une de nos formations serait bénéfique pour vous, alors n’hésitez pas de nous contacter pour toute information complémentaire.</p>
 										<ul className="social-media">

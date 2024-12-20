@@ -8,24 +8,30 @@ class IntroV2 extends Component {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
-	    return  <div className="main-blog-area pd-top-120 pd-bottom-90">
+	    return  <div className="main-blog-area pd-top-80 pd-bottom-90">
 			  <div className="container">
 			    <div className="team-details-page">
 			      <div className="row">
+				  <div className="col-lg-7 align-self-center mt-5 mt-lg-0">
+			          <div className="details">
+			            <h3>Qui sommes nous ?</h3>			            
+			            <span>EXIFOD est un organisme de formation continue et de conseil qualifié, nous mettons à votre disposition tout le savoir, les compétences et l’expérience de notre groupe de formateurs chevronnés dans leur domaine afin de vous permettre de développer vos connaissances en apprentissage à distance ou en présence, individuel ou collectif, EXIFOD vous accompagne jusqu’à l’obtention d’un certificat qualifié de compétence.<p>Etant un organisme multifonctionnel, EXIFOD vous permet de valoriser vos connaissances dans un encadrement professionnel. Notre mission consiste à former et développer les compétences personnelles ainsi que professionnelles selon vos besoins et selon votre calendrier.</p></span>
+			            
+			          </div>
+			        </div>
 			        <div className="col-lg-5">
 			          <div className="thumb">
 			            <img src={publicUrl+"assets/img/team/Qui-Somme-Nous.avif"} alt="img" />
 			          </div>
 			        </div>
-			        <div className="col-lg-7 align-self-center mt-5 mt-lg-0">
-			          <div className="details">
-			            <h3>Qui sommes nous ?</h3>			            
-			            <span>EXIFOD est un organisme de formation continue et de conseil qualifié, nous mettons à votre disposition tout le savoir, les compétences et l’expérience de notre groupe de formateurs chevronnés dans leur domaine afin de vous permettre de développer vos connaissances en apprentissage à distance ou en présence, individuel ou collectif, EXIFOD vous accompagne jusqu’à l’obtention d’un certificat qualifié de compétence.</span>
-			            <p className="mt-4">Etant un organisme multifonctionnel, EXIFOD vous permet de valoriser vos connaissances dans un encadrement professionnel. Notre mission consiste à former et développer les compétences personnelles ainsi que professionnelles selon vos besoins et selon votre calendrier.</p>
+			        
+			      </div>
+				  <div className="row pd-top-60">
+				  <div className="col-lg-5 ">
+			          <div className="thumb">
+			            <img src={publicUrl+"assets/img/team/notre-pédagogie.jpg"} alt="img" />
 			          </div>
 			        </div>
-			      </div>
-				  <div className="row">
 				  	<div className="col-lg-7 align-self-center mt-5 mt-lg-0">
 			          <div className="details">
 			            <h3>Notre pédagogie</h3>			            
@@ -33,11 +39,7 @@ class IntroV2 extends Component {
 			           
 			          </div>
 			        </div>
-					<div className="col-lg-5 ">
-			          <div className="thumb">
-			            <img src={publicUrl+"assets/img/team/notre-pédagogie.jpg"} alt="img" />
-			          </div>
-			        </div>
+					
 					</div>
 			      
 			    </div>
