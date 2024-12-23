@@ -8,25 +8,7 @@ const NavbarV2 = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const [domaines, setDomaines] = useState([]); // État pour stocker les données
-
-  useEffect(() => {
-	  axios
-	.get('http://localhost:4500/api/domaine/all') // Remplacer par votre endpoint exact
-	.then((response) => {
-	  setDomaines(response.data.data);
-	  console.log("domaine",response.data.data[0].
-		domaineNom
-		)
-
-	  console.log('Message donnée',response.data.data); 
-	  // Stocker les données dans l'état
-	})
-	.catch((error) => {
-	  console.error('Erreur lors de la récupération des Domaines:', error);
-	});
-}, []);
-
+ 
   useEffect(() => {
     const $ = window.$;
     $("body").removeClass("home-3");
@@ -110,7 +92,7 @@ const NavbarV2 = () => {
           >
             <ul className="navbar-nav menu-open">
               <li className="menu-item-has-children">
-                <Link to="/home-v2">Accueil</Link>
+                <Link to="/">Accueil</Link>
               </li>
               <li className="menu-item-has-children">
                 <Link to="/domaine-dexpertise">Domaine D'expertise</Link>

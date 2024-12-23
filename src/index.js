@@ -28,25 +28,25 @@ class Root extends Component {
                 <HashRouter basename="/">
 	                <div>
 	                <Switch>
-                        <Route exact path="/" component={HomeV1} />
-                        <Route path="/home-v2" component={HomeV2} />
-                        <Route path="/home-v3" component={HomeV3} />
-                        <Route path="/course" component={Course} />
-                        <Route path="/course-details" component={CourseDetails} />
-                        <Route path="/about" component={About} />
-                        <Route path="/event" component={Event} />
-                        <Route path="/event-details" component={EventDetails} />
-                        <Route path="/instructor" component={Instructor} />
-                        <Route path="/instructor-details" component={InstructorDetails} />
-                        <Route path="/pricing" component={Pricing} />
-                        <Route path="/gallery" component={Gallery} />
-                        <Route path="/sign-in" component={SignIn} />
-                        <Route path="/sign-up" component={SignUp} />
-                        <Route path="/contact" component={Contact} />
-                        <Route path="/blog" component={Blog} />
-                        <Route path="/blog-details" component={BlogDetails} />
-                        <Route path="/domaine-dexpertise" component={DomaineDexpertise}  />
-                        <Route path="/sousdomaine-dexpertise/:idDomaine" component={SousdomaineDexpertise}/>
+                        {/* <Route exact path="/" component={HomeV1} /> */}
+                        <Route exact path="/" component={HomeV2} />
+                        <Route exact path="/home-v3" component={HomeV3} />
+                        <Route exact path="/course" component={Course} />
+                        <Route exact path="/course-details" component={CourseDetails} />
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/event" component={Event} />
+                        <Route exact path="/event-details" component={EventDetails} />
+                        <Route exact path="/instructor" component={Instructor} />
+                        <Route exact path="/instructor-details" component={InstructorDetails} />
+                        <Route exact path="/pricing" component={Pricing} />
+                        <Route exact path="/gallery" component={Gallery} />
+                        <Route exact path="/sign-in" component={SignIn} />
+                        <Route exact path="/sign-up" component={SignUp} />
+                        <Route exact path="/contact" component={Contact} />
+                        <Route exact path="/blog" component={Blog} />
+                        <Route exact path="/blog-details" component={BlogDetails} />
+                        <Route exact path="/domaine-dexpertise" component={DomaineDexpertise}  />
+                        <Route exact path="/sousdomaine-dexpertise/:idDomaine" component={SousdomaineDexpertise}/>
 	                </Switch>
 	                </div>
                 </HashRouter>

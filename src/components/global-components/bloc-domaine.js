@@ -7,10 +7,12 @@ import axios from 'axios';
 
 const BlocDomaine = () =>{
 	const [domaines, setDomaines] = useState([]); // État pour stocker les données
+	const Url = process.env.URL_DEV;
+	console.log('url',process.env)
 
 	useEffect(() => {
 		axios
-      .get('http://localhost:4500/api/domaine/all') // Remplacer par votre endpoint exact
+      .get(`http://localhost:4500/api/domaine/all`) // Remplacer par votre endpoint exact
       .then((response) => {
         setDomaines(response.data.data);
 
