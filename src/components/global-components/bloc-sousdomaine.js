@@ -29,17 +29,15 @@ const BlocSousDomaine = () => {
             });
     }, [idDomaine]);
     return (
-        <div className="blog-area pd-top-80 pd-bottom-90 go-top">
-            <div className="container">
-                <div className="row">
+        <div className="blog-area pd-top-80 pd-bottom-90 go-top" style={{padding:'50px'}}>
+          
                     <div>
                         <h3 className='text-center text-yellow'>Introduction</h3>
                         <p>{nom}</p>
                     </div>
-                    <div className="col-lg-8 pd-top-80">
-                        <div className="row justify-content-center1">
+                        <div className="row mt-5 ">
                             {Sousdomaines.map((Sousdomaine) => (
-                                <div className="col-md-6 col-lg-3" key={Sousdomaine.sousDomaineId}>
+                                <div className="col-md-6 col-lg-4 col-sm-12 mt-5" key={Sousdomaine.sousDomaineId}>
                                     <div className="single-blog-inner     ">
                                         <div className="thumb">
                                             <img
@@ -49,7 +47,7 @@ const BlocSousDomaine = () => {
                                             />
                                         </div>
                                         <div className="details">
-                                            <h5 style={{fontSize:"14px"}}>
+                                            <h5 style={{fontSize:"14px",height:'70px'}}>
                                                 {Sousdomaine.sousDomaineNom}
                                             </h5>
                                                 <Link
@@ -65,9 +63,7 @@ const BlocSousDomaine = () => {
                             ))}
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+           
     );
 };
 

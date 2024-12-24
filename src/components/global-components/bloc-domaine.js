@@ -24,14 +24,12 @@ const BlocDomaine = () =>{
       });
   }, []);
 	  return (
-		<div className="blog-area pd-top-80 pd-bottom-90 go-top">
-		  <div className="container">
-			<div className="row">
-			  <div className="col-lg-8">
-				<div className="row justify-content-center1">
+		<div className="blog-area  pd-top-80 pd-bottom-90 go-top" style={{padding:'40px'}}>
+		
+				<div className="row ">
 				{domaines.map((domaine) => (
-					<div className="col-md-6 col-lg-3" key={domaine.domaineId}>
-					  <div className="single-blog-inner">
+					<div className="col-md-4 col-sm-12 col-lg-3 mt-3" key={domaine.domaineId}>
+					  <div className="single-blog-inner ">
 						<div className="thumb">
 						  <img
 							src={`http://localhost:4500/images/${domaine.domaineImage}`} // Image depuis le backend
@@ -51,9 +49,7 @@ const BlocDomaine = () =>{
 				  ))}
 				</div>
 			  </div>
-			</div>
-		  </div>
-		</div>
+		
 	  );
   };
 

@@ -4763,10 +4763,8 @@ h2 {
   border-radius: 7px;
   transition: 0.4s;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07);
-  width: 100%; /* Largeur relative à la colonne du grid */
-  width: 300px; /* Largeur fixe pour chaque bloc */
+  width: 100%; 
   height: 360px;  
-
 }
 
 .single-blog-inner .thumb {

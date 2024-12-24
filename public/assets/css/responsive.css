@@ -41,9 +41,9 @@
 	.single-pricing-inner-wrap .price-area span {
 	    font-size: 45px;
 	}
-	.single-blog-inner .details h3 {
+	/* .single-blog-inner .details h3 {
 		font-size: 25px;
-	}
+	} */
 	.single-team-inner .details {
 	    padding: 20px 20px;
 	}
@@ -117,9 +117,9 @@
 	.single-team-inner .thumb img {
 		width: 100% !important
 	}
-	.single-blog-inner .thumb img {
+	/* .single-blog-inner .thumb img {
 		width: 100%;
-	}
+	} */
 	.banner-inner .title {
 	    font-size: 40px;
 	}
@@ -210,9 +210,9 @@
 	.breadcrumb-area {
 	    padding: 290px 0 95px;
 	}
-	.single-blog-inner .details h3 {
+	/* .single-blog-inner .details h3 {
 		font-size: 22px;
-	}
+	} */
 	.tag-and-share .blog-share {
 		margin-top: 20px;
 	}
