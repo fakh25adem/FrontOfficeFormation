@@ -9,7 +9,7 @@ import Page_header4 from './global-components/page-header4';
 const AboutPage = () => {
     return <div>
         <Navbar />
-        <Page_header4 headertitle="Projets et programmes de développement"   />
+        <Page_header4   />
         <BlocSousDomaine />
         <Footer />
         <Scrollp />
