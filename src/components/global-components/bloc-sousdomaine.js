@@ -20,8 +20,6 @@ const BlocSousDomaine = () => {
             .then((response) => {
                 setSousdomaines(response.data.data);
                 setnom(response.data.data[0].sousDomaineIntoductionGlob)
-
-
                 console.log('Message donnée',
                 );
                 // Stocker les données dans l'état
