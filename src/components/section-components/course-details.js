@@ -6,12 +6,12 @@ const CourseDetails = () => {
     const { code } = useParams(); // Récupérer le code depuis l'URL
     const [formation, setFormation] = useState(null); // État pour stocker la formation
     const [session, setsession] = useState([]); // État pour stocker la formation
-
+console.log('code',code)
     useEffect(() => {
         axios
             .get(`http://localhost:4500/api/Formation/formations/${code}`)
             .then((response) => {
-                console.log('Message donnée', response.data.data[0].Session);
+                console.log('Formation BY CODE', response.data.data[0].Session);
                 // Vérifiez que les données sont un tableau et extrayez le premier élément
                 if (Array.isArray(response.data.data) && response.data.data.length > 0) {
                     setFormation(response.data.data[0]);
@@ -21,7 +21,7 @@ const CourseDetails = () => {
             .catch((error) => {
                 console.error('Erreur lors de la récupération des données:', error);
             });
-    }, [code]);
+    }, []);
     const groupedSessions = session.reduce((acc, current) => {
         if (!acc[current.sessionVille]) {
             acc[current.sessionVille] = [];
@@ -31,10 +31,7 @@ const CourseDetails = () => {
     }, {});
 
 
-    if (!formation) {
-        return <p>Chargement des données...</p>; // Affiche un message de chargement pendant la récupération des données
-    }
-
+  
     return (
         <div className="course-single-area pd-top-120 pd-bottom-90">
             <div className="container">
@@ -42,7 +39,7 @@ const CourseDetails = () => {
                     <div className="col-lg-8">
                         <div className="course-course-detaila-inner">
                             <h4 style={{ color:'black'
-                            }}>{formation.formationNom}</h4>
+                            }}>{formation?.formationNom}</h4>
 
                             <div className="course-details-nav-tab text-center">
                                 <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -105,7 +102,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab1-tab"
                                 >
                                     <h4>Objectifs</h4>
-                                    <p>{formation.formationObjectif}</p>
+                                    <p>{formation?.formationObjectif}</p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -114,7 +111,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab2-tab"
                                 >
                                     <h4>Programme</h4>
-                                    <p>{formation.formationProgramme}</p>
+                                    <p>{formation?.formationProgramme}</p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -123,7 +120,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab3-tab"
                                 >
                                     <h4>Prérequis</h4>
-                                    <p>{formation.formationPrerequis}</p>
+                                    <p>{formation?.formationPrerequis}</p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -132,7 +129,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab4-tab"
                                 >
                                     <h4>Public</h4>
-                                    <p>{formation.formationPublic}</p>
+                                    <p>{formation?.formationPublic}</p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -141,7 +138,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab5-tab"
                                 >
                                     <h4>Point Fort</h4>
-                                    <p>{formation.formationPointFort}</p>
+                                    <p>{formation?.formationPointFort}</p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -150,7 +147,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab6-tab"
                                 >
                                     <h4>Certification</h4>
-                                    <p>{formation.formationCertification}</p>
+                                    <p>{formation?.formationCertification}</p>
                                 </div>
                             </div>
                         </div>
@@ -165,15 +162,15 @@ const CourseDetails = () => {
                                 <ul >
                                     <li>
                                         <i className="fa fa-user "  />
-                                        <span>Code Formation :</span> {formation.formationCode}
+                                        <span>Code Formation :</span> {formation?.formationCode}
                                     </li>
                                     <li>
                                         <i className="fa fa-clock-o" />
-                                        <span>Durée :</span> {formation.formationDuree}
+                                        <span>Durée :</span> {formation?.formationDuree}
                                     </li>
                                     <li>
                                         <i className="fa fa-clipboard" />
-                                        <span>Langues :</span> {formation.formationLangue}
+                                        <span>Langues :</span> {formation?.formationLangue}
                                     </li>
 
                                 </ul>
