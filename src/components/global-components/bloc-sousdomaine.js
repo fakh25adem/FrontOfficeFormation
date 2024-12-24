@@ -29,7 +29,7 @@ const BlocSousDomaine = () => {
             .catch((error) => {
                 console.error('Erreur lors de la récupération des Domaines:', error);
             });
-    }, []);
+    }, [idDomaine]);
     return (
         <div className="blog-area pd-top-80 pd-bottom-90 go-top">
             <div className="container">

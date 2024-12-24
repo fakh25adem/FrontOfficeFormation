@@ -21,7 +21,7 @@ console.log('code',code)
             .catch((error) => {
                 console.error('Erreur lors de la récupération des données:', error);
             });
-    }, []);
+    }, [code]);
     const groupedSessions = session.reduce((acc, current) => {
         if (!acc[current.sessionVille]) {
             acc[current.sessionVille] = [];

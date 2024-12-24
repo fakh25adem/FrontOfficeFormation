@@ -82,7 +82,7 @@ const NavbarV2 = () => {
             </button>
           </div>
           <div className="logo">
-            <Link to="/home-v2">
+            <Link to="/">
               <img src={`${publicUrl}assets/img/logo3.png`} alt={imgattr} />
             </Link>
           </div>
@@ -99,52 +99,52 @@ const NavbarV2 = () => {
                 <ul className="sub-menu">
                   <ul>
                     <li>
-                      <Link to="sousdomaine-dexpertise/1">
+                      <Link to="/sousdomaine-dexpertise/1">
                         Projets et programmes <li>de développement</li>
                       </Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/2">Oil & Gas</Link>
+                      <Link to="/sousdomaine-dexpertise/2">Oil & Gas</Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/3">Développement durable</Link>
+                      <Link to="/sousdomaine-dexpertise/3">Développement durable</Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/4">Changement climatique</Link>
+                      <Link to="/sousdomaine-dexpertise/4">Changement climatique</Link>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Link to="sousdomaine-dexpertise/5">Passation des marchés</Link>
+                      <Link to="/sousdomaine-dexpertise/5">Passation des marchés</Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/6">Finance et comptabilité</Link>
+                      <Link to="/sousdomaine-dexpertise/6">Finance et comptabilité</Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/7">
+                      <Link to="/sousdomaine-dexpertise/7">
                         Management des <li>ressources humaines</li>
                       </Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/8">
+                      <Link to="/sousdomaine-dexpertise/8">
                         Modernisation de <li>l'administration publique</li>
                       </Link>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Link to="sousdomaine-dexpertise/9">Finances publiques</Link>
+                      <Link to="/sousdomaine-dexpertise/9">Finances publiques</Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/10">Santé publique</Link>
+                      <Link to="/sousdomaine-dexpertise/10">Santé publique</Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/11">
+                      <Link to="/sousdomaine-dexpertise/11">
                         Agriculture, nutrition <li>et sécurité alimentaire</li>
                       </Link>
                     </li>
                     <li>
-                      <Link to="sousdomaine-dexpertise/12">
+                      <Link to="/sousdomaine-dexpertise/12">
                         Wash (water, sanitation <li>and hygiene)</li>
                       </Link>
                     </li>
