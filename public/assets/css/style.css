@@ -1821,10 +1821,11 @@ ul {
 
 .widget_feature ul {
   padding: 0 25px 20px;
+  color: #5266C2;
 }
 
 .widget_feature ul li {
-  color: var(--heading-color);
+  color: #5266C2;
   font-size: 16px;
   margin-bottom: 9px;
   list-style: none;
@@ -1837,6 +1838,7 @@ ul {
 
 .widget_feature ul li i {
   margin-right: 8px;
+  color: var(--main-color);
 }
 
 .widget_feature .price-wrap {
@@ -1854,9 +1856,126 @@ ul {
   margin-left: 5px;
 }
 
-.widget_feature .price-wrap .btn {
-  width: 100%;
+
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: none;
+
 }
+
+.accordion-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.accordion-header:hover {
+    background-color: #e9ecef;
+    transition: none;
+
+}
+
+.accordion-header button {
+    all: unset;
+    width: 100%;
+    text-align: left;
+    color: #333;
+    font-size: 16px;
+}
+
+.accordion-header button:focus {
+    outline: none;
+}
+
+.accordion .collapse {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 0;
+    transition: none !important;
+    display: none !important;
+
+}
+.collapse.show {
+  display: block !important; /* Garde l'élément visible sans animation */
+  transition: none !important; /* Désactive toute transition */
+}
+
+.collapsing {
+  height: auto !important; /* Supprime l'effet de hauteur animée */
+  transition: none !important; /* Supprime la transition */
+}
+.accordion .card-body {
+    padding: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.accordion .card-body div {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.accordion .card-body div:last-child {
+    border-bottom: none;
+}
+
+.accordion .card-body label {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accordion .card-body input[type="radio"] {
+    accent-color: #007bff; /* Couleur personnalisée pour l'input */
+    cursor: pointer;
+}
+.btn-base {
+  background: linear-gradient(90deg, #ffc107, #ffa000); /* Dégradé maintenu */
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px; /* Coins arrondis */
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4); /* Ombre maintenue */
+  width: 100%; /* Largeur maintenue */
+  transition: none; /* Transition désactivée */
+}
+
+.btn-base:hover {
+  background: #ffa000; /* Couleur fixe au survol */
+  box-shadow: 0 4px 10px rgba(255, 140, 0, 0.5); /* Effet minimal maintenu */
+  transform: none !important; /* Suppression de tout déplacement */
+}
+
+.btn-base:active {
+  background: #ff8c00; /* Couleur fixe au clic */
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.4); /* Ombre discrète */
+  transform: none !important; /* Suppression de tout déplacement */
+}
+
+
+
+
+
+
 
 /*----------------------------------------------
     # Nav bar 
@@ -4575,6 +4694,9 @@ h2 {
 .course-course-detaila-inner .emt-user {
   margin-bottom: 13px;
 }
+.course-course-detaila-inner .h4{
+  color: #000000;
+}
 
 .course-course-detaila-inner .emt-user .u-thumb {
   height: 30px;
@@ -4622,7 +4744,7 @@ h2 {
 
 .course-details-nav-tab ul li {
   margin-bottom: 0 !important;
-  width: 25%;
+  width: 15%;
 }
 
 .course-details-nav-tab ul li a {
@@ -4670,7 +4792,8 @@ h2 {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07);
   width: 100%; /* Largeur relative à la colonne du grid */
   width: 300px; /* Largeur fixe pour chaque bloc */
-  height: 330px; 
+  height: 360px;  
+
 }
 
 .single-blog-inner .thumb {
@@ -4680,8 +4803,8 @@ h2 {
 }
 .single-blog-inner .thumb img{
   position: absolute;
-  width: 100%; /* L'image occupe toute la largeur du conteneur */
-  height: 100%; /* L'image occupe toute la hauteur du conteneur */
+  width: 100%; 
+  height: 100%; 
   object-fit: cover; }
   
 .single-blog-inner .thumb .date {
@@ -4730,8 +4853,10 @@ h2 {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  height: 50px;
   color: #000000;
+  margin-bottom: 10px;
+ 
+
 }
 
 .single-blog-inner .details .title {
@@ -4743,12 +4868,9 @@ h2 {
 }
 
 .single-blog-inner .details .read-more-text {
-  text-align: center;
-  font-size: 14px;
-  color: #000000;
-  font-weight: 500;
-  transition: 0.4s;
-  text-align: center;
+  display: block;
+  margin-top: 10px;
+  color: blue;
 
 }
 .single-blog-inner .details .read-more-text h6{
