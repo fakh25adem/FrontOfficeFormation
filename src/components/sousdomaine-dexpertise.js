@@ -4,11 +4,12 @@ import PageHeader3 from './global-components/page-header3';
 import BlocSousDomaine from './global-components/bloc-sousdomaine';
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
+import Page_header4 from './global-components/page-header4';
 
 const AboutPage = () => {
     return <div>
         <Navbar />
-        <PageHeader3 headertitle="Projets et programmes de développement"   />
+        <Page_header4 headertitle="Projets et programmes de développement"   />
         <BlocSousDomaine />
         <Footer />
         <Scrollp />
