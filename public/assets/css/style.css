@@ -2059,7 +2059,6 @@ ul {
   font-weight: 500;
   line-height: 50px;
   text-transform: capitalize;
-  margin: 0 10px;
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li a {
@@ -2126,19 +2125,26 @@ ul {
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu {
   display: none; /* Utilisation d'une grille pour un meilleur contrôle */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colonnes dynamiques */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 20px; /* Espacement entre les colonnes */
-  background-color: rgba(72, 72, 72, 0.9); /* Fond noir opaque */
+  background-color: rgba(72, 72, 72, 0.9); 
   padding: 20px;
   border-radius: 8px;
   visibility: visible !important;
   opacity: 1 !important;
-  position: absolute; /* Positionnement par rapport au parent */
-  z-index: 10; /* Pour s'assurer que le menu est au-dessus */
-  width: auto; /* Ajustement automatique à la largeur du contenu */
+  position: absolute; 
+  z-index: 10; 
+  width: auto; 
   min-width: 600px;
 }
 
+/* Requête media pour les écrans mobiles */
+@media (max-width: 768px) {
+  .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    min-width: 100%; /* Assurer qu'elle occupe toute la largeur sur mobile */
+  }
+}
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu.border-bt0 {
   border-bottom: 0px !important;
 }
@@ -2488,6 +2494,7 @@ ul {
 
   .navbar-area .nav-container .navbar-collapse .navbar-nav li a {
     display: block;
+    color: #000000 !important;
   }
 
   .navbar-area .nav-container .navbar-collapse .navbar-nav li:last-child {
@@ -2791,9 +2798,7 @@ ul {
     background: none;
   }
 
-  .navbar-area .nav-container .navbar-collapse .navbar-nav li a {
-    color: var(--heading-color);
-  }
+ 
 }
 
 /* Tablet Layout wide: 767px. */

@@ -90,7 +90,7 @@ const NavbarV2 = () => {
             className={`collapse navbar-collapse ${isOpen ? "sopen" : ""}`}
             id="edumint_main_menu"
           >
-            <ul className="navbar-nav menu-open">
+            <ul className="navbar-nav menu-open" style={{margin:'7px'}}>
               <li className="menu-item-has-children">
                 <Link to="/">Accueil</Link>
               </li>
