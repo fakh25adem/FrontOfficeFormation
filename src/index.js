@@ -32,7 +32,7 @@ class Root extends Component {
                         <Route path="/home-v2" component={HomeV2} />
                         <Route path="/home-v3" component={HomeV3} />
                         <Route path="/course" component={Course} />
-                        <Route path="/course-details" component={CourseDetails} />
+                        <Route path="/course-details/:code" component={CourseDetails} />
                         <Route path="/about" component={About} />
                         <Route path="/event" component={Event} />
                         <Route path="/event-details" component={EventDetails} />
