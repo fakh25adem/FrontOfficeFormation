@@ -15,8 +15,8 @@ const Contact = () => {
         <Footer />
         <Scrollp/>
         <div className="fixed-buttons">
-            <button className="btn btn-primary"><p>Devenir formateur</p></button>
-            <button className="btn btn-secondary"><p>Inscription en ligne</p></button>
+            <button className="btn btn-primary">Devenir formateur</button>
+            <button className="btn btn-secondary">Inscription en ligne</button>
         </div>
     </div>
 }
