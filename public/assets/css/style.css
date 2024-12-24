@@ -4717,14 +4717,14 @@ h2 {
 
 .course-details-nav-tab ul li {
   margin-bottom: 0 !important;
-  width: 15%;
+  width: 16.66%;
 }
 
 .course-details-nav-tab ul li a {
   border: 0 !important;
   border-right: 1px solid #CBD6E2 !important;
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   border-radius: 0 !important;
   color: var(--heading-color) !important;

@@ -99,6 +99,7 @@
 	.events-area .single-blog-list-wrap {
 	    padding: 40px;
 	}
+	
 }
 @media all and (max-width: 767px) {
 	.single-course-inner .thumb img {
@@ -140,6 +141,10 @@
 	}
 	.td-search-popup.active .search-form {
 	    width: 85%;
+	}
+	.course-details-nav-tab ul li {
+	    margin-bottom: 0 !important;
+	    width: 50%;
 	}
 }
 @media all and (max-width: 575px) {

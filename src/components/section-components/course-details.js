@@ -36,7 +36,7 @@ console.log('code',code)
         <div className="course-single-area pd-top-120 pd-bottom-90">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-8">
+                    <div className="col-lg-8 col-md-12 col-sm-12">
                         <div className="course-course-detaila-inner">
                             <h4 style={{ color:'black'
                             }}>{formation?.formationNom}</h4>
@@ -101,7 +101,7 @@ console.log('code',code)
                                     role="tabpanel"
                                     aria-labelledby="tab1-tab"
                                 >
-                                    <h4>Objectifs</h4>
+                                    {/* <h4>Objectifs</h4> */}
                                     <p>{formation?.formationObjectif}</p>
                                 </div>
                                 <div
@@ -110,7 +110,7 @@ console.log('code',code)
                                     role="tabpanel"
                                     aria-labelledby="tab2-tab"
                                 >
-                                    <h4>Programme</h4>
+                                    {/* <h4>Programme</h4> */}
                                     <p>{formation?.formationProgramme}</p>
                                 </div>
                                 <div
@@ -119,7 +119,7 @@ console.log('code',code)
                                     role="tabpanel"
                                     aria-labelledby="tab3-tab"
                                 >
-                                    <h4>Prérequis</h4>
+                                    {/* <h4>Prérequis</h4> */}
                                     <p>{formation?.formationPrerequis}</p>
                                 </div>
                                 <div
@@ -128,7 +128,7 @@ console.log('code',code)
                                     role="tabpanel"
                                     aria-labelledby="tab4-tab"
                                 >
-                                    <h4>Public</h4>
+                                    {/* <h4>Public</h4> */}
                                     <p>{formation?.formationPublic}</p>
                                 </div>
                                 <div
@@ -137,7 +137,7 @@ console.log('code',code)
                                     role="tabpanel"
                                     aria-labelledby="tab5-tab"
                                 >
-                                    <h4>Point Fort</h4>
+                                    {/* <h4>Point Fort</h4> */}
                                     <p>{formation?.formationPointFort}</p>
                                 </div>
                                 <div
@@ -146,13 +146,13 @@ console.log('code',code)
                                     role="tabpanel"
                                     aria-labelledby="tab6-tab"
                                 >
-                                    <h4>Certification</h4>
+                                    {/* <h4>Certification</h4> */}
                                     <p>{formation?.formationCertification}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 col-md-12 col-sm-12">
                         <div className="td-sidebar">
                             <div className="widget widget_feature">
                                 <div className="d-flex justify-content-center">
@@ -225,7 +225,7 @@ console.log('code',code)
                                     ) : (
                                         <p>Pas de sessions disponibles.</p>
                                     )}
-                                    <button className="btn btn-base btn-radius mt-3 ">S'inscrire</button>
+                                    <button style={{color:'white'}} className="btn btn-base btn-radius mt-3 ">S'inscrire</button>
                                 </div>
                             </div>
                         </div>
