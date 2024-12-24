@@ -34,7 +34,7 @@ console.log('code',code)
   
     return (
         <div className="course-single-area pd-top-120 pd-bottom-90">
-            <div className="container">
+            <div style={{padding:'40px'}}>
                 <div className="row">
                     <div className="col-lg-8 col-md-12 col-sm-12">
                         <div className="course-course-detaila-inner">
@@ -159,7 +159,7 @@ console.log('code',code)
                                     <button className="btn btn-primary bg-yellow">En présentiel</button>
                                     <button className="btn btn-secondary bg-blue">En ligne</button>
                                 </div>                                
-                                <ul >
+                                <ul className='mt-4' >
                                     <li>
                                         <i className="fa fa-user "  />
                                         <span>Code Formation :</span> {formation?.formationCode}
@@ -189,6 +189,7 @@ console.log('code',code)
                                                         style={{ color: '#5266C2'}}
                                                     >
                                                         <strong>{ville}</strong> / Prix: {groupedSessions[ville][0].sessionPrix}€
+
                                                     </button>
                                                 </div>
                                                 <div
