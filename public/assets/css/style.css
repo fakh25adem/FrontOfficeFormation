@@ -1942,34 +1942,7 @@ ul {
     accent-color: #007bff; /* Couleur personnalisée pour l'input */
     cursor: pointer;
 }
-.btn-base {
-  background: linear-gradient(90deg, #ffc107, #ffa000); /* Dégradé maintenu */
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px; /* Coins arrondis */
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4); /* Ombre maintenue */
-  width: 100%; /* Largeur maintenue */
-  transition: none; /* Transition désactivée */
-}
 
-.btn-base:hover {
-  background: #ffa000; /* Couleur fixe au survol */
-  box-shadow: 0 4px 10px rgba(255, 140, 0, 0.5); /* Effet minimal maintenu */
-  transform: none !important; /* Suppression de tout déplacement */
-}
-
-.btn-base:active {
-  background: #ff8c00; /* Couleur fixe au clic */
-  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.4); /* Ombre discrète */
-  transform: none !important; /* Suppression de tout déplacement */
-}
 
 
 
