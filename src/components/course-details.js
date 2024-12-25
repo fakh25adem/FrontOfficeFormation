@@ -7,7 +7,7 @@ import Scrollp from './Scroll-Parallax/scrollp';
 const AboutPage = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle="Projets et programmes de développement "  />
+        <PageHeader  />
         <CourseDetails />
         <Footer />
         <Scrollp/>

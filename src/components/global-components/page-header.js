@@ -1,35 +1,52 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-class Page_header extends Component {
+const PageHeader = () => {
+	const { formationCode } = useParams(); // Récupérer l'ID depuis l'URL
+	console.log("formationCode", formationCode);
+	const [nom, setNom] = useState(""); // État pour stocker le nom du domaine
+  
+	const publicUrl = process.env.PUBLIC_URL + "/";
+  
+	// Récupérer le nom du domaine basé sur domaineId
+	useEffect(() => {
+	  if (!formationCode) {
+		console.error("ID du domaine non fourni !");
+		return;
+	  }
+  
+	  axios
+	  .get(`http://localhost:4500/api/Formation/formations/${formationCode}`)
+	  .then((response) => {
+		console.log("Réponse de l'API :", response.data); // Log de la réponse API
+	
+		// Accéder au premier élément du tableau data
+		const formation = response.data.data[0];
+		if (formation && formation.formationNom) {
+		  setNom(formation.formationNom); // Mettre à jour le nom
+		  console.log("Nom du formation défini :", formation.formationNom);
+		} else {
+		  console.error("Aucun formationNom trouvé pour cet ID");
+		}
+	  })
+	  .catch((error) => {
+		console.error("Erreur lors de la récupération du formationNom:", error);
+	  });
+	
+  }, [formationCode]);
 
-    render() {
+  return (
+    <div className="breadcrumb-area bg-overlay">
+      <div className="container">
+        <div className="breadcrumb-inner">
+          <div className="section-title mb-0 text-center">
+            <h2 className="page-title">{nom}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-        let HeaderTitle = this.props.headertitle;
-        let publicUrl = process.env.PUBLIC_URL+'/'
-        let Subheader = this.props.subheader ? this.props.subheader : HeaderTitle
-
-        return (
-
-
-	<div className="breadcrumb-area bg-overlay" >
-	  <div className="container">
-	    <div className="breadcrumb-inner">
-	      <div className="section-title mb-0 text-center">
-	        <h2 className="page-title">{ HeaderTitle }</h2>
-	        <ul className="page-list">
-	          <li>{ Subheader }</li>
-	        </ul>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-
-
-        )
-    }
-}
-
-
-export default Page_header
+export default PageHeader;
