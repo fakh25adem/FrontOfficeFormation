@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const CourseDetails = () => {
-    const { code } = useParams(); // Récupérer le code depuis l'URL
+    const { formationCode } = useParams(); // Récupérer le code depuis l'URL
     const [formation, setFormation] = useState(null); // État pour stocker la formation
     const [session, setsession] = useState([]); // État pour stocker la formation
-console.log('code',code)
+console.log('formationCode',formationCode)
     useEffect(() => {
         axios
-            .get(`http://localhost:4500/api/Formation/formations/${code}`)
+            .get(`http://localhost:4500/api/Formation/formations/${formationCode}`)
             .then((response) => {
                 console.log('Formation BY CODE', response.data.data[0].Session);
                 // Vérifiez que les données sont un tableau et extrayez le premier élément
@@ -21,7 +21,7 @@ console.log('code',code)
             .catch((error) => {
                 console.error('Erreur lors de la récupération des données:', error);
             });
-    }, [code]);
+    }, [formationCode]);
     const groupedSessions = session.reduce((acc, current) => {
         if (!acc[current.sessionVille]) {
             acc[current.sessionVille] = [];
