@@ -152,7 +152,7 @@ const NavbarV2 = () => {
                 </ul>
               </li>
               <li className="menu-item-has-children">
-                <a href="#">Nos Formations</a>
+              <Link to="/formation">Nos Formation</Link>
               </li>
               <li className="menu-item-has-children">
                 <Link to="/blog">Fiches Métiers</Link>

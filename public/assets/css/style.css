@@ -5490,3 +5490,109 @@ h2 {
 .fixed-buttons .btn:hover {
   opacity: 0.9; /* Effet au survol */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.catalogue-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 250px;
+  background-size: cover;
+  background-position: center;
+  gap: 30px;
+  color: white;
+}
+
+.form-container {
+  flex: 1;
+  max-width: 45%;
+  background-color: rgba(255, 242, 242, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form select,
+form button {
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form select {
+  background-color: white;
+}
+
+form button {
+  background-color: #f9a825;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #c79100;
+}
+
+.info-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 45%;
+}
+
+.card {
+  background-color: rgba(43, 42, 42, 0.9);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.card a {
+  color: #f9a825;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #c79100;
+}
