@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from './global-components/navbar-v2';
-import PageHeader from './global-components/page-header4';
+import PageHeader3 from './global-components/page-header3';
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
 import Consulting from './consulting';
 const SingUpPage = () => {
     return <div>
         <Navbar />
-        <PageHeader />
+        <PageHeader3   headertitle="Consulting"/>
         <Consulting />
         <Footer />
         <Scrollp />
