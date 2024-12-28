@@ -16,6 +16,7 @@ const NavbarV2 = () => {
 
   const publicUrl = process.env.PUBLIC_URL + "/";
   const imgattr = "logo";
+  console.log('process.env', process.env)
  
 
   return (

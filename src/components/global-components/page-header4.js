@@ -4,10 +4,10 @@ import axios from "axios";
 
 const PageHeader4 = () => {
   const { idDomaine } = useParams(); // Récupérer l'ID depuis l'URL
-  console.log("domaineId", idDomaine);
   const [nom, setNom] = useState(""); // État pour stocker le nom du domaine
 
-  const publicUrl = process.env.PUBLIC_URL + "/";
+	const Url = process.env.REACT_APP_URL_DEV;
+	const publicUrl = process.env.REACT_APP_PUBLIC_PAGE;
 
   // Récupérer le nom du domaine basé sur domaineId
   useEffect(() => {
@@ -17,7 +17,7 @@ const PageHeader4 = () => {
     }
 
     axios
-      .get(`http://localhost:4500/api/domaine/id/${idDomaine}`) // Utilisation du bon endpoint
+      .get(`${Url}/api/domaine/id/${idDomaine}`) // Utilisation du bon endpoint
       .then((response) => {
         console.log("Réponse de l'API :", response.data); // Log de la réponse API
 

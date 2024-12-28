@@ -4,10 +4,8 @@ import axios from "axios";
 
 const PageHeader = () => {
 	const { formationCode } = useParams(); // Récupérer l'ID depuis l'URL
-	console.log("formationCode", formationCode);
 	const [nom, setNom] = useState(""); // État pour stocker le nom du domaine
-  
-	const publicUrl = process.env.PUBLIC_URL + "/";
+	const Url = process.env.REACT_APP_URL_DEV;
   
 	// Récupérer le nom du domaine basé sur domaineId
 	useEffect(() => {
@@ -17,7 +15,7 @@ const PageHeader = () => {
 	  }
   
 	  axios
-	  .get(`http://localhost:4500/api/Formation/formations/${formationCode}`)
+	  .get(`${Url}/api/Formation/formations/${formationCode}`)
 	  .then((response) => {
 		console.log("Réponse de l'API :", response.data); // Log de la réponse API
 	

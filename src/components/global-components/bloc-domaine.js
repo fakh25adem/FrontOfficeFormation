@@ -7,12 +7,12 @@ import axios from 'axios';
 
 const BlocDomaine = () =>{
 	const [domaines, setDomaines] = useState([]); // État pour stocker les données
-	const Url = process.env.URL_DEV;
-	console.log('url',process.env)
+	const Url = process.env.REACT_APP_URL_DEV;
+	console.log('url',Url)
 
 	useEffect(() => {
 		axios
-      .get(`http://localhost:4500/api/domaine/all`) // Remplacer par votre endpoint exact
+      .get(`${Url}/api/domaine/all`) // Remplacer par votre endpoint exact
       .then((response) => {
         setDomaines(response.data.data);
 
@@ -32,7 +32,7 @@ const BlocDomaine = () =>{
 					  <div className="single-blog-inner ">
 						<div className="thumb">
 						  <img
-							src={`http://localhost:4500/images/${domaine.domaineImage}`} // Image depuis le backend
+							src={`${Url}/images/${domaine.domaineImage}`} // Image depuis le backend
 							alt={domaine.domaineImage}
 						  />
 						</div>

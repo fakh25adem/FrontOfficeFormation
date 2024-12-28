@@ -6,10 +6,11 @@ const CourseDetails = () => {
     const { formationCode } = useParams(); // Récupérer le code depuis l'URL
     const [formation, setFormation] = useState(null); // État pour stocker la formation
     const [session, setsession] = useState([]); // État pour stocker la formation
-console.log('formationCode',formationCode)
+    const Url = process.env.REACT_APP_URL_DEV;
+
     useEffect(() => {
         axios
-            .get(`http://localhost:4500/api/Formation/formations/${formationCode}`)
+            .get(`${Url}/api/Formation/formations/${formationCode}`)
             .then((response) => {
                 console.log('Formation BY CODE', response.data.data[0].Session);
                 // Vérifiez que les données sont un tableau et extrayez le premier élément

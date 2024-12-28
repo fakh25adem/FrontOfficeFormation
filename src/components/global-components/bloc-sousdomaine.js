@@ -12,11 +12,12 @@ const BlocSousDomaine = () => {
     console.log("domaineId", idDomaine)
     const [Sousdomaines, setSousdomaines] = useState([]); // État pour stocker les données
     const [nom, setnom] = useState([]); // État pour stocker les données
+	const Url = process.env.REACT_APP_URL_DEV;
 
 
     useEffect(() => {
         axios
-            .get(`http://localhost:4500/api/Sousdomaine/iddomaine/${idDomaine}`)
+            .get(`${Url}/api/Sousdomaine/iddomaine/${idDomaine}`)
             .then((response) => {
                 setSousdomaines(response.data.data);
                 setnom(response.data.data[0].sousDomaineIntoductionGlob)
@@ -41,7 +42,7 @@ const BlocSousDomaine = () => {
                                     <div className="single-blog-inner     ">
                                         <div className="thumb">
                                             <img
-                                                src={`http://localhost:4500/images/${Sousdomaine.sousDomaineImage}`} // Image depuis le backend
+                                                src={`${Url}/images/${Sousdomaine.sousDomaineImage}`} // Image depuis le backend
                                                 alt={Sousdomaine.sousDomaineImage}
 
                                             />
