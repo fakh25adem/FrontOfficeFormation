@@ -14,6 +14,7 @@ const App = () => {
     organisme: "",
     pays: "",
     modeFormation: "",
+    typeFormation: "", // Pour les boutons radio
     theme: "",
     dateDebut: "",
     dateFin: "",
@@ -35,11 +36,13 @@ const App = () => {
 
     const newErrors = {};
     for (const field in formData) {
-      if (!formData[field]) {
+      if (!formData[field]&& field !== "typeFormation") {
         newErrors[field] = "Ce champ est obligatoire.";
       }
     }
-
+    if (formData.modeFormation === "A distance" && !formData.typeFormation) {
+        newErrors.typeFormation = "Veuillez choisir un type de formation.";
+      }
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
@@ -91,7 +94,7 @@ const App = () => {
     <form onSubmit={handleSubmit}>
       <div className="form-row1">
         <div className="form-group1">
-          <label>Civilité</label>
+          <label>Civilité *</label>
           <select name="civilite" value={formData.civilite} onChange={handleChange}>
             <option value="">Civilité</option>
             <option value="M.">M.</option>
@@ -189,7 +192,7 @@ const App = () => {
 
       <div className="form-row1">
         <div className="form-group1">
-          <label>Mode de formation</label>
+          <label>Mode de formation *</label>
           <select
             name="modeFormation"
             value={formData.modeFormation}
@@ -200,7 +203,39 @@ const App = () => {
             <option value="A distance">A distance</option>
           </select>
           {errors.modeFormation && <p className="error">{errors.modeFormation}</p>}
-        </div>
+
+        <div className={`radio-group ${formData.modeFormation === "A distance" ? "active" : ""}`}>
+
+    <label> Participer en ligne
+      <input
+        type="radio"
+        name="typeFormation"
+        value="Participer en ligne"
+        onChange={handleChange}
+        checked={formData.typeFormation === "Participer en ligne"}
+      />
+    </label>
+    <label> E-learning
+      <input
+        type="radio"
+        name="typeFormation"
+        value="E-learning"
+        onChange={handleChange}
+        checked={formData.typeFormation === "E-learning"}
+      />
+    </label>
+    <label> Classe virtuelle
+      <input
+        type="radio"
+        name="typeFormation"
+        value="Classe virtuelle"
+        onChange={handleChange}
+        checked={formData.typeFormation === "Classe virtuelle"}
+      />
+    </label>
+  </div>
+  </div>
+
         <div className="form-group1">
           <label>Thème *</label>
           <input
