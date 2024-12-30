@@ -1,88 +1,53 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const FormulaireInscriptionEnLigne = () => {
-    const [isFormVisible, setIsFormVisible] = useState(true);
-
-    const handleCloseForm = () => {
-        setIsFormVisible(false);
-    };
-
-    if (!isFormVisible) {
-        return null; // Cache le formulaire si l'état est défini sur `false`
-    }
-
     return (
-        <div className="form-container">
-            <button
-                onClick={handleCloseForm}
-                className="close-button"
-                style={{
-                    position: 'absolute',
-                    top: '70px',
-                    right: '470px', // Ajustez cette valeur selon vos besoins pour l'espacement
-                    backgroundColor: '#007BFF',
-                    color: '#FFF',
-                    border: 'none',
-                    borderRadius: '5px',
-                    padding: '5px 10px',
-                    cursor: 'pointer',
-                    zIndex: 1000, 
-                }}
-            >
-                Fermer
-            </button>
-            <h2>Inscription en Ligne</h2>
-            <form className="form">
+        <div className="inscription-form-container ">
+            <h2 className="inscription-title mg-top--50">Inscription en Ligne</h2>
+            <form className="inscription-form ">
                 {/* Civilité */}
-                <div className="form-group">
-                    <label htmlFor="civilite">Civilité *</label>
-                    <select id="civilite" required>
-                        <option value="M">M</option>
+                <div className="form-group11">
+                    <select id="civilite" className="form-select" required>
+                        <option value="Civilité">Civilité</option>
                         <option value="Mme">Mme</option>
                         <option value="Mlle">Mademoiselle</option>
                     </select>
                 </div>
 
                 {/* Prénom et Nom */}
-                <div className="form-row">
-                    <div className="form-group">
-                        <label htmlFor="prenom">Prénom *</label>
-                        <input type="text" id="prenom" required />
+                <div className="form-row1">
+                    <div className="form-group11">
+                        <input type="text" id="prenom" placeholder='Prénom' className="form-input" required />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="nom">Nom *</label>
-                        <input type="text" id="nom" required />
+                    <div className="form-group11">
+                        <input type="text" id="nom" placeholder='Nom'className="form-input" required />
                     </div>
                 </div>
 
                 {/* Email et Téléphone */}
-                <div className="form-row">
-                    <div className="form-group">
-                        <label htmlFor="email">Email *</label>
-                        <input type="email" id="email" required />
+                <div className="form-row1">
+                    <div className="form-group11">
+                        <input type="email" id="email" placeholder='Email' className="form-input" required />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="telephone">N° Téléphone *</label>
-                        <input type="text" id="telephone" required />
+                    <div className="form-group11">
+                        <input type="text" id="telephone" placeholder='N° Téléphone *' className="form-input" required />
                     </div>
                 </div>
 
                 {/* Post occupé et Employeur */}
-                <div className="form-row">
-                    <div className="form-group">
-                        <label htmlFor="postOccupe">Post occupé *</label>
-                        <input type="text" id="postOccupe" required />
+                <div className="form-row1">
+                    <div className="form-group11">
+                        <input type="text" id="postOccupe" placeholder='Post occupé *' className="form-input" required />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="employeur">Employeur</label>
-                        <input type="text" id="employeur" />
+                    <div className="form-group11">
+                        <input type="text" id="employeur" placeholder='Employeur *' className="form-input" />
                     </div>
                 </div>
 
                 {/* Pays */}
-                <div className="form-group">
-                    <label htmlFor="pays">Pays *</label>
-                    <select id="pays" required>
+                <div className="form-group11">
+                    <label >Pays *</label>
+                    <select id="pays" className="form-select" required>
                         <option value="tunisia">Tunisia (تونس)</option>
                         <option value="france">France</option>
                         <option value="algeria">Algeria</option>
@@ -91,18 +56,18 @@ const FormulaireInscriptionEnLigne = () => {
                 </div>
 
                 {/* Mode de formation */}
-                <div className="form-group">
+                <div className="form-group11">
                     <label>Mode de la formation *</label>
                     <div className="button-group">
-                        <button type="button">Sur Catalogue</button>
-                        <button type="button">Sur Mesure</button>
+                        <button type="button" className="btn-catalogue">Sur Catalogue</button>
+                        <button type="button" className="btn-sur-mesure">Sur Mesure</button>
                     </div>
                 </div>
 
                 {/* Titre de la formation */}
-                <div className="form-group">
-                    <label htmlFor="titreFormation">Titre de la formation *</label>
-                    <select id="titreFormation" required>
+                <div className="form-group11">
+                    <label >Titre de la formation *</label>
+                    <select id="titreFormation" className="form-select" required>
                         <option value="">-- Choisissez un titre --</option>
                         <option value="projets">Projets et programmes de développement</option>
                         <option value="management">Management</option>
@@ -111,13 +76,12 @@ const FormulaireInscriptionEnLigne = () => {
                 </div>
 
                 {/* Message */}
-                <div className="form-group">
-                    <label htmlFor="message">Message *</label>
-                    <textarea id="message" rows="5" required></textarea>
+                <div className="form-group11">
+                    <textarea id="message" className="form-textarea" placeholder='Message *' rows="5" required></textarea>
                 </div>
 
                 {/* Bouton d'envoi */}
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn-submit">
                     Envoyer
                 </button>
             </form>

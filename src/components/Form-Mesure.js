@@ -5,9 +5,19 @@ import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
 import PageHeader1 from './global-components/page-header1';
 import { Link } from 'react-router-dom';
+import FormulaireInscriptionEnLigne from './global-components/formulaire-inscritenligne'; // Import du formulaire
+
 
 const FormMesur = () => {
-   
+    const [isPopupVisible, setIsPopupVisible] = useState(false); // État pour afficher ou masquer le popup
+
+    const handleOpenPopup = () => {
+        setIsPopupVisible(true);
+    };
+
+    const handleClosePopup = () => {
+        setIsPopupVisible(false);
+    };
 
     return (
         <div>
@@ -20,14 +30,31 @@ const FormMesur = () => {
                 <Link to="/Formateur">
                     <button className="btn btn-primary">Devenir formateur</button>
                 </Link>
-                <Link to="/InscriptionEnLigne" >         
-            <button className="btn btn-secondary">Inscription en ligne</button>
-            </Link>  
+                <button
+                    onClick={handleOpenPopup} // Affiche le popup
+                    className="btn btn-secondary"
+                >
+                    Inscription en ligne
+                </button>
             </div>
 
-            
+            {/* Popup */}
+            {isPopupVisible && (
+               <div className="popup-overlay ">
+               <div className="popup-content ">
+                   {/* Formulaire d'inscription */}
+                   <FormulaireInscriptionEnLigne />
+                   <button
+                       onClick={handleClosePopup}
+                       className="popup-close-button">
+                       ✕
+                   </button>
+               </div>
+           </div>
+            )}
         </div>
     );
 };
+
 
 export default FormMesur;
