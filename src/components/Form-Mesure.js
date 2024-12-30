@@ -1,22 +1,16 @@
 import React from 'react';
 import Navbar from './global-components/navbar-v2';
-import FormComponent from './global-components/FormComponent';
-import InfoComponent from './global-components/InfoComponent';
-import AboutV6 from './section-components/about-v6';
-import InstructorPage from './section-components/instructor';
+import FormSurMesur from './global-components/formSurMesur'
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
+import PageHeader1 from './global-components/page-header1';
 
 
-const Formation = () => {
+const FormMesur = () => {
     return <div >
         <Navbar />
-        <div className="formation-container">
-                <FormComponent />
-                <InfoComponent />
-            </div>
-            <AboutV6 />
-            <InstructorPage />
+        <PageHeader1 headertitle="Nos formations sur mesure"/>
+        <FormSurMesur/>
         <Footer />
         <Scrollp/>
         <div className="fixed-buttons">
@@ -26,5 +20,5 @@ const Formation = () => {
     </div>
 }
 
-export default Formation
+export default FormMesur
 

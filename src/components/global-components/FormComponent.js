@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaChalkboardTeacher, FaGraduationCap, FaLaptop } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 import axios from 'axios';
 
@@ -357,8 +358,8 @@ const FormComponent = () => {
     <div className="card">
         <FaChalkboardTeacher size={40} style={{ color: "#f9a825", marginBottom: "10px" }} />
         <h3>FORMATION SUR MESURE</h3>
-        <a href="#">En savoir +</a>
-    </div>
+        <h6><Link to="/FormMesur">En savoir +</Link></h6>
+        </div>
     <div className="card">
         <FaGraduationCap size={40} style={{ color: "#f9a825", marginBottom: "10px" }} />
         <h3>NOS CURSUS</h3>

@@ -20,7 +20,8 @@ import Blog from './components/blog';
 import BlogDetails from './components/blog-details';
 import DomaineDexpertise from './components/domaine-dexpertise';
 import SousdomaineDexpertise from './components/sousdomaine-dexpertise';
-import Formation from './components/formation'
+import Formation from './components/formation';
+import FormMesur from './components/Form-Mesure';
 
 
 class Root extends Component {
@@ -50,6 +51,7 @@ class Root extends Component {
                         <Route exact path="/domaine-dexpertise" component={DomaineDexpertise}  />
                         <Route exact path="/sousdomaine-dexpertise/:idDomaine" component={SousdomaineDexpertise}/>
                         <Route exact path="/formation" component={Formation} />
+                        <Route exact path="/FormMesur" component={FormMesur} />
 	                </Switch>
 	                </div>
                 </HashRouter>
