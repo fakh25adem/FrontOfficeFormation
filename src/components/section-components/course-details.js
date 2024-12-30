@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
+import { FaPlane, FaCar } from "react-icons/fa";
+import { IoHome } from "react-icons/io5";
+import { FaMapLocationDot } from "react-icons/fa6";
 const CourseDetails = () => {
     const { formationCode } = useParams(); // Récupérer le code depuis l'URL
     const [formation, setFormation] = useState(null); // État pour stocker la formation
@@ -32,14 +36,15 @@ const CourseDetails = () => {
     }, {});
 
 
-  
+
     return (
         <div className="course-single-area pd-top-120 pd-bottom-90">
-            <div style={{padding:'40px'}}>
+            <div style={{ padding: '40px' }}>
                 <div className="row">
                     <div className="col-lg-8 col-md-12 col-sm-12">
                         <div className="course-course-detaila-inner">
-                            <h4 style={{ color:'black'
+                            <h4 style={{
+                                color: 'black'
                             }}>{formation?.formationNom}</h4>
 
                             <div className="course-details-nav-tab text-center">
@@ -152,6 +157,27 @@ const CourseDetails = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="advantages-section">
+                            <h2 className="advantages-title">NOS AVANTAGES</h2>
+                            <div className="advantages-icons">
+                                <div className="advantage">
+                                    <FaPlane className="icon icon-plane" />
+                                    <p >Visa</p>
+                                </div>
+                                <div className="advantage">
+                                    <IoHome className="icon icon-home" />
+                                    <p>Appui à l’hébergement</p>
+                                </div>
+                                <div className="advantage">
+                                    <FaCar className="icon icon-car" />
+                                    <p>Accueil & transfert</p>
+                                </div>
+                                <div className="advantage">
+                                    <FaMapLocationDot className="icon icon-map" />
+                                    <p>Visites touristiques</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12">
                         <div className="td-sidebar">
@@ -159,10 +185,10 @@ const CourseDetails = () => {
                                 <div className="d-flex justify-content-center">
                                     <button className="btn btn-primary bg-yellow">En présentiel</button>
                                     <button className="btn btn-secondary bg-blue">En ligne</button>
-                                </div>                                
+                                </div>
                                 <ul className='mt-4' >
                                     <li>
-                                        <i className="fa fa-user "  />
+                                        <i className="fa fa-user " />
                                         <span>Code Formation :</span> {formation?.formationCode}
                                     </li>
                                     <li>
@@ -187,7 +213,7 @@ const CourseDetails = () => {
                                                         data-target={`#collapse${index}`}
                                                         aria-expanded="false"
                                                         aria-controls={`collapse${index}`}
-                                                        style={{ color: '#5266C2'}}
+                                                        style={{ color: '#5266C2' }}
                                                     >
                                                         <strong>{ville}</strong> / Prix: {groupedSessions[ville][0].sessionPrix}€
 
@@ -205,7 +231,7 @@ const CourseDetails = () => {
                                                                 style={{
                                                                     padding: '5px 0',
                                                                     borderBottom: '1px solid #ddd',
-                                                                   
+
 
                                                                 }}
                                                             >
@@ -227,7 +253,11 @@ const CourseDetails = () => {
                                     ) : (
                                         <p>Pas de sessions disponibles.</p>
                                     )}
-                                    <button style={{color:'white'}} className="btn btn-base btn-radius mt-3 ">S'inscrire</button>
+                                    <Link to="/Inscription">
+                                        <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3">
+                                            S'inscrire
+                                        </button>
+                                    </Link>                                
                                 </div>
                             </div>
                         </div>

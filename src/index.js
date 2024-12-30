@@ -22,7 +22,9 @@ import DomaineDexpertise from './components/domaine-dexpertise';
 import SousdomaineDexpertise from './components/sousdomaine-dexpertise';
 import Formation from './components/formation';
 import FormMesur from './components/Form-Mesure';
-
+import Inscription from './components/inscription';
+import Formateur from './components/formateur';
+import InscriptionEnLigne from './components/inscrit-enligne'
 
 class Root extends Component {
     render() {
@@ -52,6 +54,10 @@ class Root extends Component {
                         <Route exact path="/sousdomaine-dexpertise/:idDomaine" component={SousdomaineDexpertise}/>
                         <Route exact path="/formation" component={Formation} />
                         <Route exact path="/FormMesur" component={FormMesur} />
+                        <Route exact path="/Inscription" component={Inscription}/>
+                        <Route exact path="/Formateur" component={Formateur}/>
+                        <Route exact path="/InscriptionEnLigne" component={InscriptionEnLigne}/>
+
 	                </Switch>
 	                </div>
                 </HashRouter>

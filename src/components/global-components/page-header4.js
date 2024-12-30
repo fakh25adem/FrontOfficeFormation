@@ -7,7 +7,7 @@ const PageHeader4 = () => {
   const [nom, setNom] = useState(""); // État pour stocker le nom du domaine
 
 	const Url = process.env.REACT_APP_URL_DEV;
-	const publicUrl = process.env.REACT_APP_PUBLIC_PAGE;
+  let publicUrl = process.env.PUBLIC_URL+'/'
 
   // Récupérer le nom du domaine basé sur domaineId
   useEffect(() => {
@@ -36,12 +36,8 @@ const PageHeader4 = () => {
   }, [idDomaine]);
 
   return (
-    <div
-      className="page-header3-area"
-      style={{
-        backgroundImage: `url(${publicUrl}assets/img/institute/Eduma-cover-banner-17.jpg)`,
-      }}
-    >
+    <div className="page-header3-area " style={{backgroundImage: 'url('+publicUrl+'assets/img/institute/Eduma-cover-banner-17.jpg)'}} >
+
       <div className="container">
         <div className="page-header3-inner">
           <div className="section-title">

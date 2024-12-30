@@ -15,8 +15,10 @@ class scrollp extends Component {
 			            	<h1>Devenir formateur ?	</h1>
 			            	<p className="content ">Rejoignez-nous chez Exifod pour partager votre expertise et contribuer à former la prochaine génération de professionnels</p>
 			        	</div>
+						<Link to="/Formateur">
 						<button classe="btn btn-base b-animate-3 mr-sm-3 mr-2">Postuler</button>
-			    	</div>
+			    	</Link>
+					</div>
 				</div>
 			</div>
         }

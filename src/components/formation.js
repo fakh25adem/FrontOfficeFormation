@@ -6,7 +6,7 @@ import AboutV6 from './section-components/about-v6';
 import InstructorPage from './section-components/instructor';
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
-
+import { Link } from 'react-router-dom';
 
 const Formation = () => {
     return <div >
@@ -20,9 +20,12 @@ const Formation = () => {
         <Footer />
         <Scrollp/>
         <div className="fixed-buttons">
+        <Link to="/Formateur">
             <button className="btn btn-primary">Devenir formateur</button>
+            </Link>            
+            <Link to="/InscriptionEnLigne" >         
             <button className="btn btn-secondary">Inscription en ligne</button>
-        </div>
+            </Link>          </div>
     </div>
 }
 

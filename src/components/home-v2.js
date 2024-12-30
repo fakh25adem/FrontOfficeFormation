@@ -9,9 +9,10 @@ import Temoignages from './section-components/temoignages';
 import PageHeader2 from './global-components/page-header2';
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
-
+import { Link } from 'react-router-dom';
 
 const Home_V2 = () => {
+   
     return <div>
         <Navbar />
         <Banner />
@@ -24,9 +25,12 @@ const Home_V2 = () => {
         <Footer />
         <Scrollp/>
         <div className="fixed-buttons">
+        <Link to="/Formateur">
             <button className="btn btn-primary">Devenir formateur</button>
+            </Link>            
+            <Link to="/InscriptionEnLigne" >         
             <button className="btn btn-secondary">Inscription en ligne</button>
-        </div>
+            </Link>          </div>
     </div>
 }
 

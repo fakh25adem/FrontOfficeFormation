@@ -1,28 +1,27 @@
 import React from 'react';
 import Navbar from './global-components/navbar-v2';
-import PageHeader from './global-components/page-header';
-import CourseDetails from './section-components/course-details';
+import PageHeader3 from './global-components/page-header3';
+import BlocDomaine from './global-components/bloc-domaine';
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
 import { Link } from 'react-router-dom';
-const AboutPage = () => {
+import FormFormateur from './global-components/form-formateur';
 
+const Formateur = () => {
     return <div>
         <Navbar />
-        <PageHeader  />
-        <CourseDetails />
+        <PageHeader3 headertitle="Espace Formateur"  />
+        <FormFormateur />
         <Footer />
-        <Scrollp/>
+        <Scrollp />
         <div className="fixed-buttons">
-        <Link to="/Formateur">
+            <Link to="/Formateur">
             <button className="btn btn-primary">Devenir formateur</button>
             </Link>
             <Link to="/InscriptionEnLigne" >         
             <button className="btn btn-secondary">Inscription en ligne</button>
-            </Link>  
-        </div>
+            </Link>          </div>
     </div>
 }
 
-export default AboutPage
-
+export default Formateur;

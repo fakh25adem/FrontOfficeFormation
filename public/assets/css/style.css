@@ -3775,6 +3775,7 @@ h2 {
   border: none;
   cursor: pointer;
   background: transparent;  /* Supprime le fond gris */
+  color: #000;
 
 }
 
@@ -5862,4 +5863,217 @@ button {
 
 button:hover {
   background-color: #d48800;
+}
+
+.advantages-section {
+  text-align: center;
+  margin: 50px 0; /* Espacement autour de la section */
+}
+
+.advantages-title {
+  font-size: 28px; /* Taille du titre */
+  font-weight: bold;
+  margin-bottom: 40px; /* Espacement sous le titre */
+}
+
+.advantages-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px; /* Espacement horizontal entre les icônes */
+  flex-wrap: nowrap; /* Empêche le repliement des éléments */
+}
+
+.advantage {
+  display: flex;
+  flex-direction: column; /* Arrange les éléments verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  max-width: 120px; /* Largeur maximale pour chaque bloc d'avantage */
+  text-align: center; /* Centre le texte */
+}
+
+.advantage .icon {
+  font-size: 50px; /* Taille des icônes */
+  color: #e60000; /* Rouge vif pour les icônes */
+  margin-bottom: 15px; /* Espacement entre l'icône et le texte */
+  display: block; /* Aligne l'icône verticalement */
+  
+}
+
+.advantage p {
+  font-size: 14px; /* Taille du texte */
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Couleur du texte */
+  margin: 0; /* Supprime les marges par défaut autour du texte */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+}
+
+
+
+
+
+
+
+.formateur-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.formateur-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.file-upload-label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.file-upload-input {
+  display: block;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.btn-submit {
+  padding: 10px;
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-submit:hover {
+  background-color: #e69500;
+}
+
+
+.container22 {
+  width: 100%;
+  padding: 155px;
+  box-sizing: border-box;
+  overflow: visible; /* Empêche le contenu d'être masqué */
+}
+
+/* Styles pour le titre */
+.header22 h2 {
+  font-size: 24px;
+  color: #000; /* Couleur noire */
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+  .header22 h2 {
+      font-size: 20px;
+      padding: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.btn-primary {
+  background-color: #ffb606;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #ffb606;
 }
