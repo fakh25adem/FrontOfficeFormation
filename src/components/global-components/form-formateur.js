@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 const FormFormateur = () => {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -18,10 +20,29 @@ const FormFormateur = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        // Vous pouvez ajouter ici une logique pour envoyer les données au serveur
+
+        const data = new FormData();
+        data.append('firstName', formData.firstName);
+        data.append('lastName', formData.lastName);
+        data.append('email', formData.email);
+        data.append('phone', formData.phone);
+        data.append('cv', formData.cv);
+        data.append('message', formData.message);
+
+        try {
+            const response = await axios.post('http://localhost:4500/api/form/Form', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            console.log('Réponse du serveur:', response.data);
+            alert('Formulaire soumis avec succès!');
+        } catch (error) {
+            console.error('Erreur lors de la soumission du formulaire:', error);
+            alert("Une erreur est survenue lors de l'envoi du formulaire.");
+        }
     };
 
     return (
@@ -55,14 +76,14 @@ const FormFormateur = () => {
                     onChange={handleChange}
                     required
                 />
-                <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Numéro de téléphone"
-                    className="form-control"
-                    value={formData.phone}
-                    onChange={handleChange}
+                <PhoneInput
+                    country={"tn"} // Pays par défaut
+                    value={formData.telephone}
+                    onChange={(value) => setFormData({ ...formData, telephone: value })}
+                    placeholder="N° téléphone *"
+                    inputStyle={{ width: "100%" }}
                 />
+
                 <label className="file-upload-label">
                     Télécharger CV *
                     <input

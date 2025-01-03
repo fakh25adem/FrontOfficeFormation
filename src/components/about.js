@@ -1,27 +1,66 @@
-import React from 'react';
-import Navbar from './global-components/navbar-v4';
-import PageHeader from './global-components/page-header';
-import About from './section-components/about-v2';
-import FunFact from './section-components/fun-fact';
-import Team from './section-components/team-v3';
-import SpecialArea from './section-components/special-area';
-import Testimonial from './section-components/testimonial-v4';
-import Event from './section-components/upcoming-event';
-import Footer from './global-components/footer';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from './global-components/navbar-v2';
+import Intro from './section-components/intro-v2';
+import Modeformation from './section-components/mode-formation';
+import Client from './section-components/client';
+import Temoignages from './section-components/temoignages';
+import Footer from './global-components/footer-v2';
+import Scrollp from './Scroll-Parallax/scrollp';
+import FormulaireInscriptionEnLigne from './global-components/formulaire-inscritenligne'; // Import du formulaire
+import PhotoNavigation from './section-components/photonavigation';
+import ExifodSection from './section-components/exifodsection';
+const Home_V2 = () => {
+    const [isPopupVisible, setIsPopupVisible] = useState(false); // État pour afficher ou masquer le popup
 
-const AboutPage = () => {
-    return <div>
-        <Navbar />
-        <PageHeader headertitle="About"  />
-        <About sectionclass="pd-bottom-120" />
-        <FunFact />
-        <Team />
-        <SpecialArea />
-        <Testimonial />
-        <Event />
-        <Footer />
-    </div>
-}
+    const handleOpenPopup = () => {
+        setIsPopupVisible(true);
+    };
 
-export default AboutPage
+    const handleClosePopup = () => {
+        setIsPopupVisible(false);
+    };
 
+    return (
+        <div>
+            <Navbar />
+            <Intro  />
+            <Modeformation />
+            <PhotoNavigation />
+            <ExifodSection />
+           
+            <Footer />
+            <Scrollp />
+
+            {/* Boutons fixes */}
+            <div className="fixed-buttons">
+                <Link to="/Formateur">
+                    <button className="btn btn-primary">Devenir formateur</button>
+                </Link>
+                <button
+                    onClick={handleOpenPopup} // Affiche le popup
+                    className="btn btn-secondary"
+                >
+                    Inscription en ligne
+                </button>
+            </div>
+
+            {/* Popup */}
+            {isPopupVisible && (
+               <div className="popup-overlay ">
+               <div className="popup-content ">
+                   {/* Formulaire d'inscription */}
+                   <FormulaireInscriptionEnLigne />
+                   <button
+                       onClick={handleClosePopup}
+                       className="popup-close-button">
+                       ✕
+                   </button>
+               </div>
+           </div>
+            )}
+        </div>
+    );
+};
+
+export default Home_V2;

@@ -1,14 +1,14 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Navbar from './global-components/navbar-v2';
-import FormComponent from './global-components/FormComponent';
-import AboutV6 from './section-components/about-v6';
-import InstructorPage from './section-components/instructor';
+import FormSurMesur from './global-components/formSurMesur';
 import Footer from './global-components/footer-v2';
 import Scrollp from './Scroll-Parallax/scrollp';
+import PageHeader1 from './global-components/page-header1';
 import { Link } from 'react-router-dom';
 import FormulaireInscriptionEnLigne from './global-components/formulaire-inscritenligne'; // Import du formulaire
 
-const Formation = () => {
+
+const CursusForm = () => {
     const [isPopupVisible, setIsPopupVisible] = useState(false); // État pour afficher ou masquer le popup
 
     const handleOpenPopup = () => {
@@ -19,20 +19,17 @@ const Formation = () => {
         setIsPopupVisible(false);
     };
 
-    return(  <div >
-        <Navbar />
-        <div className="formation-container">
-                <FormComponent />
-            </div>
-            <AboutV6 />
-            <InstructorPage />
-        <Footer />
-        <Scrollp/>
-        <div className="fixed-buttons">
-        <Link to="/Formateur">
-            <button className="btn btn-primary">Devenir formateur</button>
-            </Link>            
-            <button
+    return (
+        <div>
+            <Navbar />
+            <PageHeader1 headertitle="Nos cursus de formation"  />
+            <Footer />
+            <Scrollp />
+            <div className="fixed-buttons">
+                <Link to="/Formateur">
+                    <button className="btn btn-primary">Devenir formateur</button>
+                </Link>
+                <button
                     onClick={handleOpenPopup} // Affiche le popup
                     className="btn btn-secondary"
                 >
@@ -58,5 +55,5 @@ const Formation = () => {
     );
 };
 
-export default Formation
 
+export default CursusForm;
