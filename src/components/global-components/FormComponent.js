@@ -14,8 +14,32 @@ const FormComponent = () => {
     const Url = process.env.REACT_APP_URL_DEV;
     const domainesApiURL = `${Url}/api/Domaine/all`;
     const sousDomainesApiURL = `${Url}/api/sousDomaine/iddomaine`;
+    const [selectedDate, setSelectedDate] = useState('');
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const data = {
+            domaine: selectedDomaine,
+            sousDomaine: selectedSousDomaine,
+            date: selectedDate,
+            pays: selectedCountry,
+        };
+        console.log('recherche',data)
 
-    // Charger les domaines au montage du composant
+        // Supprimer les propriétés qui sont undefined ou null
+       // Object.keys(data).forEach(key => (data[key] == null) && delete data[key]);
+
+        axios
+        .post(`${Url}/api/Formation/recherche`, data)
+        .then((response) => {
+          // Traitement en cas de succès
+          console.log('Formations récupérées:', response.data.data);
+        })
+        .catch((error) => {
+          // Traitement en cas d'erreur
+          console.error('Erreur lors de la récupération des données:', error);
+        });
+    };
+
     useEffect(() => {
         const fetchDomaines = async () => {
             try {
@@ -65,7 +89,7 @@ const FormComponent = () => {
         }}>
             <div className="form-container">
                 <h2>Formation sur catalogue</h2>
-                <form>
+                <form >
                     {/* Liste des domaines */}
                     <select
                         name="domaine"
@@ -94,7 +118,9 @@ const FormComponent = () => {
                         ))}
                     </select>
                     <h6>Date de la formation</h6>
-                    <input type="date" placeholder="Date de la formation" />
+                    <input type="date"
+                        value={selectedDate}
+                        onChange={(e) => setSelectedDate(e.target.value)} placeholder="Date de la formation" />
                     <h6>Pays de la formation</h6>
                     <select name="pays" value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)}>
                         <option value="">Choisissez un pays</option>
@@ -103,7 +129,7 @@ const FormComponent = () => {
                         ))}
                     </select>
 
-                    <button type="submit">RECHERCHE</button>
+                    <button  type="button" onClick={handleSubmit}>RECHERCHE</button>
                 </form>
             </div>
 

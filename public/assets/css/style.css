@@ -5544,18 +5544,18 @@ form select {
   background-color: white;
 }
 
-form button {
+/* form button {
   background-color: #f9a825;
   color: rgb(255, 255, 255);
   font-weight: bold;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
-form button:hover {
+/* form button:hover {
   background-color: #c79100;
-}
+} */
 
 .info-cards {
   flex: 1;
