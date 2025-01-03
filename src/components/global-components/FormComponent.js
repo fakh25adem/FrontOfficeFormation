@@ -89,7 +89,7 @@ const FormComponent = () => {
         }}>
             <div className="form-container">
                 <h2>Formation sur catalogue</h2>
-                <form onSubmit={handleSubmit} >
+                <form >
                     {/* Liste des domaines */}
                     <select
                         name="domaine"
@@ -129,7 +129,7 @@ const FormComponent = () => {
                         ))}
                     </select>
 
-                    <button  type="submit">RECHERCHE</button>
+                    <button  type="button" onClick={handleSubmit}>RECHERCHE</button>
                 </form>
             </div>
 
