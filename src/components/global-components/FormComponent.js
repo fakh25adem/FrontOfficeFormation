@@ -116,7 +116,8 @@ const FormComponent = () => {
                 <div className="card">
                     <FaGraduationCap size={40} style={{ color: "#f9a825", marginBottom: "10px" }} />
                     <h3>NOS CURSUS</h3>
-                    <a href="#">En savoir +</a>
+                    <h6><Link to="/CursusForm">En savoir +</Link></h6>
+
                 </div>
                 <div className="card">
                     <FaLaptop size={40} style={{ color: "#f9a825", marginBottom: "10px" }} />

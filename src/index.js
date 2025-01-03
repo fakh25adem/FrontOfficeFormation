@@ -24,7 +24,8 @@ import Formation from './components/formation';
 import FormMesur from './components/Form-Mesure';
 import Inscription from './components/inscription';
 import Formateur from './components/formateur';
-import InscriptionEnLigne from './components/inscrit-enligne'
+import InscriptionEnLigne from './components/inscrit-enligne';
+import CursusForm from './components/cursus-form';
 
 class Root extends Component {
     render() {
@@ -38,7 +39,7 @@ class Root extends Component {
                         <Route exact path="/course" component={Course} />
                         <Route exact path="/course-details/:formationCode" component={CourseDetails} />
                         <Route exact path="/course-details-by-id/:formationCode" component={CourseDetails} />
-                        <Route exact path="/about" component={About} />
+                        <Route exact path="/decouvrir" component={About} />
                         <Route exact path="/event" component={Event} />
                         <Route exact path="/event-details" component={EventDetails} />
                         <Route exact path="/instructor" component={Instructor} />
@@ -57,6 +58,7 @@ class Root extends Component {
                         <Route exact path="/Inscription" component={Inscription}/>
                         <Route exact path="/Formateur" component={Formateur}/>
                         <Route exact path="/InscriptionEnLigne" component={InscriptionEnLigne}/>
+                        <Route exact path="/CursusForm" component={CursusForm} />
 
 	                </Switch>
 	                </div>

@@ -182,9 +182,9 @@ const CourseDetails = () => {
                     <div className="col-lg-4 col-md-12 col-sm-12">
                         <div className="td-sidebar">
                             <div className="widget widget_feature">
-                                <div className="d-flex justify-content-center">
-                                    <button className="btn btn-primary bg-yellow">En présentiel</button>
-                                    <button className="btn btn-secondary bg-blue">En ligne</button>
+                                <div className="d-flex justify-content-center mg-top-90">
+                                    <button className="btn btn-primary">Présentiel</button>
+                                    <button className="btn btn-primary">En ligne</button>
                                 </div>
                                 <ul className='mt-4' >
                                     <li>
@@ -257,7 +257,12 @@ const CourseDetails = () => {
                                         <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3">
                                             S'inscrire
                                         </button>
-                                    </Link>                                
+                                    </Link> 
+                                    <Link to="/FormMesur">
+                                        <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3">
+                                            Sur Mesure
+                                        </button>
+                                    </Link>                               
                                 </div>
                             </div>
                         </div>

@@ -33,7 +33,7 @@ class Footer_v2 extends Component {
 							</div>
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_contact">
-									<h4 className="widget-title">Contact Us</h4>
+									
 									<ul className="details">
 									<li><i className="fa fa-phone" />  (+216) 71 90 54 29</li>
 									<li><i className="fa fa-fax" />  (+216) 71 90 54 30</li>
@@ -45,7 +45,6 @@ class Footer_v2 extends Component {
 							</div>
 							<div className="col-lg-3 col-md-6">
 								<div className="widget widget_nav_menu">
-									<h4 className="widget-title">Course</h4>
 									<ul className="go-top">
 										<li><Link to="/blog">Accueil</Link></li>
 										<li><Link to="/blog">Domaine D'expertise </Link></li>
