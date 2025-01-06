@@ -24,7 +24,7 @@ class BannerV2 extends Component {
       zIndex: '-1',
     }}
   >
-    <source src={publicUrl + 'assets/img/banner/vd.mp4'} type="video/mp4" />
+    <source src={publicUrl + 'assets/img/banner/bg-vd.mp4'} type="video/mp4" />
   </video>
 		  <div className="container">
 		    <div className="row">

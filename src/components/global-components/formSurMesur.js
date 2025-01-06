@@ -349,15 +349,7 @@ const App = () => {
                     checked={formData.typeFormation === "E-learning"}
                   />
                 </label>
-                <label> Classe virtuelle
-                  <input
-                    type="radio"
-                    name="typeFormation"
-                    value="Classe virtuelle"
-                    onChange={handleChange}
-                    checked={formData.typeFormation === "Classe virtuelle"}
-                  />
-                </label>
+                
               </div>
             </div>
 
@@ -426,7 +418,7 @@ const App = () => {
 
             <div className="form-group1">
               <label>Message *</label>
-              <input
+              <textarea
                 type="text"
                 name="message"
                 placeholder="Message"

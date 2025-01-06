@@ -78,8 +78,10 @@ const FormFormateur = () => {
                 />
                 <PhoneInput
                     country={"tn"} // Pays par défaut
-                    value={formData.telephone}
-                    onChange={(value) => setFormData({ ...formData, telephone: value })}
+                    value={formData.phone}
+                    name="phone"
+
+                    onChange={(value) => setFormData({ ...formData, phone: value })}
                     placeholder="N° téléphone *"
                     inputStyle={{ width: "100%" }}
                 />

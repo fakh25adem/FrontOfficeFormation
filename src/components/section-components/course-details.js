@@ -10,6 +10,8 @@ const CourseDetails = () => {
     const { formationCode } = useParams(); // Récupérer le code depuis l'URL
     const [formation, setFormation] = useState(null); // État pour stocker la formation
     const [session, setsession] = useState([]); // État pour stocker la formation
+    const [modeChoisi, setModeChoisi] = useState(''); // État pour le mode sélectionné
+
     const Url = process.env.REACT_APP_URL_DEV;
 
     useEffect(() => {
@@ -182,9 +184,20 @@ const CourseDetails = () => {
                     <div className="col-lg-4 col-md-12 col-sm-12">
                         <div className="td-sidebar">
                             <div className="widget widget_feature">
-                                <div className="d-flex justify-content-center mg-top-90">
-                                    <button className="btn btn-primary">Présentiel</button>
-                                    <button className="btn btn-primary">En ligne</button>
+                            <div className="d-flex justify-content-center mg-top-90">
+                                    {/* Boutons pour définir le mode */}
+                                    <button
+                                        className={`btn ${modeChoisi === 'Présentiel' ? 'btn-primary' : 'btn-secondary'}`}
+                                        onClick={() => setModeChoisi('Présentiel')}
+                                    >
+                                        Présentiel
+                                    </button>
+                                    <button
+                                        className={`btn ${modeChoisi === 'En ligne' ? 'btn-primary' : 'btn-secondary'}`}
+                                        onClick={() => setModeChoisi('En ligne')}
+                                    >
+                                        En ligne
+                                    </button>
                                 </div>
                                 <ul className='mt-4' >
                                     <li>
@@ -253,7 +266,12 @@ const CourseDetails = () => {
                                     ) : (
                                         <p>Pas de sessions disponibles.</p>
                                     )}
-                                    <Link to="/Inscription">
+                                    <Link to={{pathname:"/Inscription",
+                                        state:{
+                                            formation,
+                                            mode: modeChoisi,
+                                        }
+                                    }}>
                                         <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3">
                                             S'inscrire
                                         </button>
