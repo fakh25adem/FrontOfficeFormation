@@ -44,12 +44,23 @@ const FormulaireInscriptionEnLigne = () => {
 
     const newErrors = {};
     for (const field in formData) {
-      if (!formData[field] && field !== "typeFormation") {
+      if (!formData[field] && field !== "typeFormation" && field !== "theme" && field !== "date" && field !== "nombrePersonnes") {
         newErrors[field] = "Ce champ est obligatoire.";
       }
     }
     if (formData.modeFormation === "Sur Catalogue" && !formData.typeFormation) {
       newErrors.typeFormation = "Veuillez choisir un type de formation.";
+    }
+    if (formData.modeFormation === "Sur Mesure") {
+      if (!formData.theme) {
+        newErrors.theme = "Le thème est obligatoire pour une formation sur mesure.";
+      }
+      if (!formData.date) {
+        newErrors.date = "La date est obligatoire pour une formation sur mesure.";
+      }
+      if (!formData.nombrePersonnes) {
+        newErrors.nombrePersonnes = "Le nombre de personnes est obligatoire pour une formation sur mesure.";
+      }
     }
     setErrors(newErrors);
 
@@ -80,7 +91,6 @@ const FormulaireInscriptionEnLigne = () => {
             <option value="">Civilité</option>
             <option value="M.">M.</option>
             <option value="Mme">Mme</option>
-            <option value="Mlle">Mlle</option>
 
           </select>
           {errors.civilite && <p className="error">{errors.civilite}</p>}
@@ -332,11 +342,9 @@ const FormulaireInscriptionEnLigne = () => {
                 onChange={handleChange}
               >
                 <option value="">-- Choisissez une option --</option>
-                <option value="Présentiel">En Présentiel</option>
-                <option value="distance">À Distance</option>
+                <option value="Présentiel">-- En Présentiel</option>
                 <option value="enLigne">-- Participer en ligne</option>
                 <option value="eLearning">-- E-learning</option>
-                <option value="classeVirtuelle">-- Classe virtuelle</option>
               </select>
               {errors.typeFormation && <p className="error">{errors.typeFormation}</p>}
             </div>
@@ -353,7 +361,6 @@ const FormulaireInscriptionEnLigne = () => {
                 className="form-input"
                 value={formData.theme}
                 onChange={handleChange}
-                required
               />
               {errors.theme && <p className="error">{errors.theme}</p>}
 
@@ -365,7 +372,6 @@ const FormulaireInscriptionEnLigne = () => {
                 className="form-input"
                 value={formData.date}
                 onChange={handleChange}
-                required
               />
               {errors.date && <p className="error">{errors.date}</p>}
 
@@ -378,7 +384,7 @@ const FormulaireInscriptionEnLigne = () => {
                 className="form-input"
                 value={formData.nombrePersonnes}
                 onChange={handleChange}
-                required
+                
               />
               {errors.nombrePersonnes && (
                 <p className="error">{errors.nombrePersonnes}</p>
@@ -402,7 +408,6 @@ const FormulaireInscriptionEnLigne = () => {
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
         </div>
-
         <button type="submit">Demander Devis</button>
       </form>
 
