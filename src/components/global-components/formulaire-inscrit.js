@@ -7,7 +7,7 @@ import axios from "axios";
 const FormulaireInscrit = () => {
   const location = useLocation();
   const { formation = {}, mode = "Non sélectionné" } = location.state || {};
-
+  const [formDataFormulaire, setFormDataFormulaire] = useState(location.state.formation)
   const [formData, setFormData] = useState({
     civility: "M.",
     prenom: "",

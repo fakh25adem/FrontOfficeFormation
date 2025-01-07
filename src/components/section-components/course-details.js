@@ -110,7 +110,8 @@ const CourseDetails = () => {
                                     aria-labelledby="tab1-tab"
                                 >
                                     {/* <h4>Objectifs</h4> */}
-                                    <p>{formation?.formationObjectif}</p>
+                                    <p dangerouslySetInnerHTML={{__html:formation?.formationObjectif}}>{}</p>
+
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -119,7 +120,8 @@ const CourseDetails = () => {
                                     aria-labelledby="tab2-tab"
                                 >
                                     {/* <h4>Programme</h4> */}
-                                    <p>{formation?.formationProgramme}</p>
+                                    <p dangerouslySetInnerHTML={{__html:formation?.formationProgramme}}>{}</p>
+
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -128,7 +130,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab3-tab"
                                 >
                                     {/* <h4>Prérequis</h4> */}
-                                    <p>{formation?.formationPrerequis}</p>
+                                    <p dangerouslySetInnerHTML={{__html:formation?.formationPrerequis}}>{}</p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -137,7 +139,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab4-tab"
                                 >
                                     {/* <h4>Public</h4> */}
-                                    <p>{formation?.formationPublic}</p>
+                                    <p dangerouslySetInnerHTML={{__html:formation?.formationPublic}}></p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -146,7 +148,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab5-tab"
                                 >
                                     {/* <h4>Point Fort</h4> */}
-                                    <p>{formation?.formationPointFort}</p>
+                                    <p dangerouslySetInnerHTML={{ __html: formation?.formationPointFort }}></p>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -155,7 +157,7 @@ const CourseDetails = () => {
                                     aria-labelledby="tab6-tab"
                                 >
                                     {/* <h4>Certification</h4> */}
-                                    <p>{formation?.formationCertification}</p>
+                                    <p dangerouslySetInnerHTML={{ __html:formation?.formationCertification}}></p>
                                 </div>
                             </div>
                         </div>
