@@ -20,10 +20,6 @@ const RechercheResult = () => {
     return (<div >
         <Navbar />
         <div className="content-layout">
-            {/* Sidebar à gauche */}
-            <Sidebar />
-
-            {/* Contenu principal à droite */}
             <main className="main-content">
                 <ResultatRech />
             </main>

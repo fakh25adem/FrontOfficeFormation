@@ -33,11 +33,12 @@ const FormComponent = () => {
            try {
             const response = await axios.post(`${Url}/api/Formation/recherche`, data);
             console.log('Formations récupérées:', response.data.data);
+            localStorage.setItem('formations', JSON.stringify(response.data.data));
 
-            // Redirigez vers la page des résultats avec les données de recherche
+
             history.push({
                 pathname: "/RechercheResult",
-                state: { ...data, results: response.data.data },
+                // state: { ...data, results: response.data.data },
             });
         } catch (error) {
             console.error('Erreur lors de la récupération des données:', error);
