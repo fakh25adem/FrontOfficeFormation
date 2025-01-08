@@ -1,7 +1,6 @@
 {
   "name": "edumint",
   "version": "0.1.0",
-  "homepage": "https://solverwp.com/demo/react/edumint",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^2.20.3",

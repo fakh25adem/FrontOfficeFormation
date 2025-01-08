@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
-import HomeV1 from './components/home-v1';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomeV2 from './components/home-v2';
 import HomeV3 from './components/home-v3';
 import Course from './components/course';
@@ -32,10 +31,9 @@ import RechercheResult from './components/recherche-result';
 class Root extends Component {
     render() {
         return(
-                <HashRouter basename="/">
-	                <div>
-	                <Switch>
-                        {/* <Route exact path="/" component={HomeV1} /> */}
+            <Router basename="/">
+                <div>
+                    <Switch>
                         <Route exact path="/" component={HomeV2} />
                         <Route exact path="/home-v3" component={HomeV3} />
                         <Route exact path="/course" component={Course} />
@@ -53,25 +51,21 @@ class Root extends Component {
                         <Route exact path="/contact" component={Contact} />
                         <Route exact path="/blog" component={Blog} />
                         <Route exact path="/blog-details" component={BlogDetails} />
-                        <Route exact path="/domaine-dexpertise" component={DomaineDexpertise}  />
-                        <Route exact path="/sousdomaine-dexpertise/:idDomaine" component={SousdomaineDexpertise}/>
+                        <Route exact path="/domaine-dexpertise" component={DomaineDexpertise} />
+                        <Route exact path="/sousdomaine-dexpertise/:idDomaine" component={SousdomaineDexpertise} />
                         <Route exact path="/formation" component={Formation} />
                         <Route exact path="/FormMesur" component={FormMesur} />
-                        <Route exact path="/Inscription" component={Inscription}/>
-                        <Route exact path="/Formateur" component={Formateur}/>
-                        <Route exact path="/InscriptionEnLigne" component={InscriptionEnLigne}/>
+                        <Route exact path="/Inscription" component={Inscription} />
+                        <Route exact path="/Formateur" component={Formateur} />
+                        <Route exact path="/InscriptionEnLigne" component={InscriptionEnLigne} />
                         <Route exact path="/CursusForm" component={CursusForm} />
                         <Route exact path="/ResultatRech" component={ResultatRech} />
                         <Route exact path="/RechercheResult" component={RechercheResult} />
-
-
-	                </Switch>
-	                </div>
-                </HashRouter>
-        )
+                    </Switch>
+                </div>
+            </Router>
+        );
     }
 }
-
-export default Root;
 
 ReactDOM.render(<Root />, document.getElementById('edumint'));
