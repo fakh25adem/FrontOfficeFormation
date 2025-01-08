@@ -26,6 +26,8 @@ import Inscription from './components/inscription';
 import Formateur from './components/formateur';
 import InscriptionEnLigne from './components/inscrit-enligne';
 import CursusForm from './components/cursus-form';
+import ResultatRech from './components/resultat-rech';
+import RechercheResult from './components/recherche-result';
 
 class Root extends Component {
     render() {
@@ -59,6 +61,9 @@ class Root extends Component {
                         <Route exact path="/Formateur" component={Formateur}/>
                         <Route exact path="/InscriptionEnLigne" component={InscriptionEnLigne}/>
                         <Route exact path="/CursusForm" component={CursusForm} />
+                        <Route exact path="/ResultatRech" component={ResultatRech} />
+                        <Route exact path="/RechercheResult" component={RechercheResult} />
+
 
 	                </Switch>
 	                </div>

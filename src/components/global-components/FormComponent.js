@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaChalkboardTeacher, FaGraduationCap, FaLaptop } from 'react-icons/fa';
-import { Link } from "react-router-dom";
-
+ import { Link } from "react-router-dom";
 import axios from 'axios';
 import countries from '../country/country';
+import { useHistory } from "react-router-dom";
+
 const FormComponent = () => {
     let publicUrl = process.env.PUBLIC_URL + '/'
     const [selectedCountry, setSelectedCountry] = useState("");
@@ -12,6 +13,7 @@ const FormComponent = () => {
     const [domaines, setDomaines] = useState([]);
     const [selectedDomaine, setSelectedDomaine] = useState("");
     const Url = process.env.REACT_APP_URL_DEV;
+    const history = useHistory(); // Utilisez useHistory au lieu de useNavigate
     const domainesApiURL = `${Url}/api/Domaine/all`;
     const sousDomainesApiURL = `${Url}/api/sousDomaine/iddomaine`;
     const [selectedDate, setSelectedDate] = useState('');
@@ -23,23 +25,24 @@ const FormComponent = () => {
             date: selectedDate,
             pays: selectedCountry,
         };
-        console.log('recherche',data)
-
+        console.log('recherche', data)
         // Supprimer les propriétés qui sont undefined ou null
-       // Object.keys(data).forEach(key => (data[key] == null) && delete data[key]);
+        // Object.keys(data).forEach(key => (data[key] == null) && delete data[key]);
 
-        axios
-        .post(`${Url}/api/Formation/recherche`, data)
-        .then((response) => {
-          // Traitement en cas de succès
-          console.log('Formations récupérées:', response.data.data);
-        })
-        .catch((error) => {
-          // Traitement en cas d'erreur
-          console.error('Erreur lors de la récupération des données:', error);
-        });
+           // Envoyer les données au serveur (si nécessaire) et rediriger avec les données
+           try {
+            const response = await axios.post(`${Url}/api/Formation/recherche`, data);
+            console.log('Formations récupérées:', response.data.data);
+
+            // Redirigez vers la page des résultats avec les données de recherche
+            history.push({
+                pathname: "/RechercheResult",
+                state: { ...data, results: response.data.data },
+            });
+        } catch (error) {
+            console.error('Erreur lors de la récupération des données:', error);
+        }
     };
-
     useEffect(() => {
         const fetchDomaines = async () => {
             try {
@@ -54,10 +57,8 @@ const FormComponent = () => {
                 console.error("Erreur lors de la récupération des domaines :", error);
             }
         };
-
         fetchDomaines();
     }, []);
-
     // Charger les sous-domaines dynamiquement lorsque le domaine est sélectionné
     useEffect(() => {
         if (selectedDomaine) {
@@ -103,7 +104,6 @@ const FormComponent = () => {
                             </option>
                         ))}
                     </select>
-
                     {/* Liste des sous-domaines récupérés */}
                     <select
                         name="sousDomaine"
@@ -128,8 +128,9 @@ const FormComponent = () => {
                             <option key={index} value={country}>{country}</option>
                         ))}
                     </select>
+                    <button type="button" onClick={handleSubmit}>RECHERCHE</button>
 
-                    <button  type="button" onClick={handleSubmit}>RECHERCHE</button>
+
                 </form>
             </div>
 

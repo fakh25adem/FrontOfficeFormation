@@ -408,7 +408,7 @@ const FormulaireInscriptionEnLigne = () => {
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
         </div>
-        <button type="submit">Demander Devis</button>
+        <button type="submit">Envoyer</button>
       </form>
 
     </div>
