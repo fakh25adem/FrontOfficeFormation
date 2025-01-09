@@ -83,7 +83,7 @@ const FormFormateur = () => {
 
                     onChange={(value) => setFormData({ ...formData, phone: value })}
                     placeholder="N° téléphone *"
-                    inputStyle={{ width: "100%" }}
+                    inputStyle={{ width: "100%",height:'42px' }}
                 />
 
                 <label className="file-upload-label">
@@ -104,9 +104,13 @@ const FormFormateur = () => {
                     value={formData.message}
                     onChange={handleChange}
                 ></textarea>
-                <button type="submit" className="btn-submit">
-                    ENVOYER
-                </button>
+                <div className="form-row">
+         <div className="col-12">
+         <center><button type="submit">Envoyer</button></center>
+          </div>
+          
+          </div>
+                
             </form>
         </div>
     );

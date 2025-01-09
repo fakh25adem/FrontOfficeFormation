@@ -38,7 +38,6 @@ class Root extends Component {
                         <Route exact path="/home-v3" component={HomeV3} />
                         <Route exact path="/course" component={Course} />
                         <Route exact path="/course-details/:formationCode" component={CourseDetails} />
-                        <Route exact path="/course-details-by-id/:formationCode" component={CourseDetails} />
                         <Route exact path="/decouvrir" component={About} />
                         <Route exact path="/event" component={Event} />
                         <Route exact path="/event-details" component={EventDetails} />

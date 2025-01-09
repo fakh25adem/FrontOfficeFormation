@@ -6317,7 +6317,6 @@ textarea {
 
 .popup-content {
   background-color: white;
-  padding: 20px;
   border-radius: 10px;
   width: 40%; /* Largeur par défaut augmentée */
   max-width: 800px; /* Largeur maximale */

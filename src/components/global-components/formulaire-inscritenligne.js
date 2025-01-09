@@ -20,9 +20,10 @@ const FormulaireInscriptionEnLigne = () => {
     nombrePersonnes: "",
     message: "",
   });
+  console.log("fr", formData)
 
   const [errors, setErrors] = useState({});
-  const [displayCatalogue, setDisplayCatalogue] = useState(false);
+  const [displayCatalogue, setDisplayCatalogue] = useState(true);
   const [displaySurMesure, setDisplaySurMesure] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,11 +79,8 @@ const FormulaireInscriptionEnLigne = () => {
   };
 
   return (
-    <div className="inscription-form-container">
-
-
-
-      <h2 className="inscription-title mg-top--250">Inscription en Ligne</h2>
+    <div className="inscription-form-container mt-5">
+      <h2 className="inscription-title mg-top--250 ">Inscription en Ligne</h2>
 
       <form className="inscription-form" onSubmit={handleSubmit}>
         <div className="form-group11">
@@ -95,8 +93,8 @@ const FormulaireInscriptionEnLigne = () => {
           </select>
           {errors.civilite && <p className="error">{errors.civilite}</p>}
         </div>
-        <div className="form-row1">
-          <div className="form-group11">
+        <div className=" row">
+          <div className="form-group col-12 col-sm-6">
             <label>Prénom *</label>
             <input
               type="text"
@@ -107,7 +105,7 @@ const FormulaireInscriptionEnLigne = () => {
             />
             {errors.prenom && <p className="error">{errors.prenom}</p>}
           </div>
-          <div className="form-group11">
+          <div className="form-group col-12 col-sm-6">
             <label>Nom *</label>
             <input
               type="text"
@@ -119,21 +117,21 @@ const FormulaireInscriptionEnLigne = () => {
             {errors.nom && <p className="error">{errors.nom}</p>}
           </div>
         </div>
-        <div className="form-row1">
 
-        <div className="form-group11">
-              <label>N° de téléphone *</label>
-              <PhoneInput
-                    country={"tn"} // Pays par défaut
-                    value={formData.telephone}
-                    onChange={(value) => setFormData({ ...formData, telephone: value })}
-                    placeholder="N° téléphone *"
-                    inputStyle={{ width: "100%" }}
-                />
-              {errors.telephone && <p className="error">{errors.telephone}</p>}
-            </div>
+        <div className=" row">
+          <div className="form-group col-12 col-sm-6">
+            <label>N° de téléphone *</label>
+            <PhoneInput
+              country={"tn"} // Pays par défaut
+              value={formData.telephone}
+              onChange={(value) => setFormData({ ...formData, telephone: value })}
+              placeholder="N° téléphone *"
+              inputStyle={{ width: "100%", height: "59px" }}
+            />
+            {errors.telephone && <p className="error">{errors.telephone}</p>}
+          </div>
 
-          <div className="form-group11">
+          <div className="form-group col-12 col-sm-6">
             <label>Email *</label>
             <input
               type="email"
@@ -145,8 +143,9 @@ const FormulaireInscriptionEnLigne = () => {
             {errors.email && <p className="error">{errors.email}</p>}
           </div>
         </div>
-        <div className="form-row1">
-          <div className="form-group11">
+
+        <div className=" row">
+          <div className="form-group col-12 col-sm-6">
             <label>Post Occupé *</label>
             <input
               type="text"
@@ -158,7 +157,7 @@ const FormulaireInscriptionEnLigne = () => {
             {errors.postOccupe && <p className="error">{errors.postOccupe}</p>}
           </div>
 
-          <div className="form-group11">
+          <div className="form-group11 col-12 col-sm-6">
             <label>Organisme/Employeur *</label>
             <input
               type="text"
@@ -170,8 +169,8 @@ const FormulaireInscriptionEnLigne = () => {
             {errors.organisme && <p className="error">{errors.organisme}</p>}
           </div>
         </div>
-        <div className="form-row1">
-          <div className="form-group11">
+        <div className="form-row">
+          <div className="form-group col-12">
             <label>Pays *</label>
             <select
               name="pays"
@@ -307,34 +306,38 @@ const FormulaireInscriptionEnLigne = () => {
             {errors.pays && <p className="error">{errors.pays}</p>}
           </div>
         </div>
-        <div className="form-row1">
 
-          {/* Mode de formation */}
-          {/* Mode de formation */}
-          <div className="form-group11">
+        {/* Mode de formation */}
+        {/* Mode de formation */}
+        <div className="form-row">
+          <div className="col-12 ">
             <label>Mode de la formation *</label>
-            <div className="button-group">
+            <div className="d-flex justify-content-center mt-3">
               <button
                 type="button"
-                className={`btn-catalogue ${formData.modeFormation === "Sur Catalogue" ? "active" : ""
-                  }`}
+                className={`btn-catalogue ${formData.modeFormation == "Sur Catalogue" ? "active" : ""} mx-3`}
                 onClick={handleCatalogueClick}
               >
                 Sur Catalogue
               </button>
               <button
                 type="button"
-                className={`btn-sur-mesure ${formData.modeFormation === "Sur Mesure" ? "active" : ""
-                  }`}
+                className={`btn-sur-mesure ${formData.modeFormation == "Sur Mesure" ? "active" : ""} mx-3`}
                 onClick={handleSurMesureClick}
               >
                 Sur Mesure
               </button>
             </div>
+
+
+
           </div>
 
-          {displayCatalogue && (
-            <div className="form-group11">
+
+        </div>
+        {displayCatalogue && (
+          <div className="form-row">
+            <div className="form-group col-12 mt-4">
               <label>Sélectionnez une option :</label>
               <select
                 name="typeFormation"
@@ -342,73 +345,80 @@ const FormulaireInscriptionEnLigne = () => {
                 onChange={handleChange}
               >
                 <option value="">-- Choisissez une option --</option>
-                <option value="Présentiel">-- En Présentiel</option>
-                <option value="enLigne">-- Participer en ligne</option>
-                <option value="eLearning">-- E-learning</option>
+                <option value="Présentiel">En Présentiel</option>
+                <option value="enLigne"> Participer en ligne</option>
+                <option value="eLearning"> E-learning</option>
               </select>
               {errors.typeFormation && <p className="error">{errors.typeFormation}</p>}
             </div>
-          )}
+          </div>
 
-          {displaySurMesure && (
-            <div className="form-group11">
-              <label>Thème :</label>
-              <input
-                type="text"
-                id="theme"
-                name="theme"
-                placeholder="Entrez le thème"
-                className="form-input"
-                value={formData.theme}
-                onChange={handleChange}
-              />
-              {errors.theme && <p className="error">{errors.theme}</p>}
+        )}
 
-              <label>Date :</label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                className="form-input"
-                value={formData.date}
-                onChange={handleChange}
-              />
-              {errors.date && <p className="error">{errors.date}</p>}
-
-              <label>Nombre de personnes :</label>
-              <input
-                type="number"
-                id="nombrePersonnes"
-                name="nombrePersonnes"
-                placeholder="Entrez le nombre de personnes"
-                className="form-input"
-                value={formData.nombrePersonnes}
-                onChange={handleChange}
-                
-              />
-              {errors.nombrePersonnes && (
-                <p className="error">{errors.nombrePersonnes}</p>
-              )}
-            </div>
-          )}
-        </div>
-
-
-
-        <div className="form-row1">
+        {displaySurMesure && (
           <div className="form-group11">
-            <label>Message *</label>
+            <label>Thème :</label>
             <input
               type="text"
+              id="theme"
+              name="theme"
+              placeholder="Entrez le thème"
+              className="form-input"
+              value={formData.theme}
+              onChange={handleChange}
+            />
+            {errors.theme && <p className="error">{errors.theme}</p>}
+
+            <label>Date :</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              className="form-input"
+              value={formData.date}
+              onChange={handleChange}
+            />
+            {errors.date && <p className="error">{errors.date}</p>}
+
+            <label>Nombre de personnes :</label>
+            <input
+              type="number"
+              id="nombrePersonnes"
+              name="nombrePersonnes"
+              placeholder="Entrez le nombre de personnes"
+              className="form-input"
+              value={formData.nombrePersonnes}
+              onChange={handleChange}
+
+            />
+            {errors.nombrePersonnes && (
+              <p className="error">{errors.nombrePersonnes}</p>
+            )}
+          </div>
+        )}
+
+
+
+        <div className="row">
+          <div className=" col-12">
+            <textarea
+              rows="5"
               name="message"
               placeholder="Message"
               value={formData.message}
               onChange={handleChange}
+              className="form-control"
+
             />
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
         </div>
-        <button type="submit">Envoyer</button>
+        <div className="form-row">
+          <div className="col-12">
+            <center><button type="submit">Envoyer</button></center>
+          </div>
+
+        </div>
       </form>
 
     </div>

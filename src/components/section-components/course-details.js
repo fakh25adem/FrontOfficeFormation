@@ -109,8 +109,8 @@ const CourseDetails = () => {
                                     role="tabpanel"
                                     aria-labelledby="tab1-tab"
                                 >
-                                    {/* <h4>Objectifs</h4> */}
-                                    <p>{formation?.formationObjectif}</p>
+                                    {/* Objectifs */}
+                                    <p dangerouslySetInnerHTML={{ __html: formation?.formationObjectif }} />
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -118,8 +118,8 @@ const CourseDetails = () => {
                                     role="tabpanel"
                                     aria-labelledby="tab2-tab"
                                 >
-                                    {/* <h4>Programme</h4> */}
-                                    <p>{formation?.formationProgramme}</p>
+                                    {/* Programme */}
+                                    <p dangerouslySetInnerHTML={{ __html: formation?.formationProgramme }} />
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -127,8 +127,8 @@ const CourseDetails = () => {
                                     role="tabpanel"
                                     aria-labelledby="tab3-tab"
                                 >
-                                    {/* <h4>Prérequis</h4> */}
-                                    <p>{formation?.formationPrerequis}</p>
+                                    {/* Prérequis */}
+                                    <p dangerouslySetInnerHTML={{ __html: formation?.formationPrerequis }} />
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -136,8 +136,8 @@ const CourseDetails = () => {
                                     role="tabpanel"
                                     aria-labelledby="tab4-tab"
                                 >
-                                    {/* <h4>Public</h4> */}
-                                    <p>{formation?.formationPublic}</p>
+                                    {/* Public */}
+                                    <p dangerouslySetInnerHTML={{ __html: formation?.formationPublic }} />
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -145,8 +145,8 @@ const CourseDetails = () => {
                                     role="tabpanel"
                                     aria-labelledby="tab5-tab"
                                 >
-                                    {/* <h4>Point Fort</h4> */}
-                                    <p>{formation?.formationPointFort}</p>
+                                    {/* Point Fort */}
+                                    <p dangerouslySetInnerHTML={{ __html: formation?.formationPointFort }} />
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -154,46 +154,48 @@ const CourseDetails = () => {
                                     role="tabpanel"
                                     aria-labelledby="tab6-tab"
                                 >
-                                    {/* <h4>Certification</h4> */}
-                                    <p>{formation?.formationCertification}</p>
+                                    {/* Certification */}
+                                    <p dangerouslySetInnerHTML={{ __html: formation?.formationCertification }} />
                                 </div>
                             </div>
                         </div>
-                        <div className="advantages-section">
-                            <h2 className="advantages-title">NOS AVANTAGES</h2>
-                            <div className="advantages-icons">
-                                <div className="advantage">
-                                    <FaPlane className="icon icon-plane" />
-                                    <p >Visa</p>
+                        
+                            <h2 >NOS AVANTAGES</h2>
+                            <div className=" row mt-2">
+                                <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                    <FaPlane style={{fontSize:'50px',color:'red'}} className="icon icon-plane" />
+                                    <p style={{fontWeight:'600',color:'black'}}>Visa</p>
                                 </div>
-                                <div className="advantage">
-                                    <IoHome className="icon icon-home" />
-                                    <p>Appui à l’hébergement</p>
+                                <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                    <IoHome style={{fontSize:'50px',color:'red'}} className="icon icon-home" />
+                                    <p style={{fontWeight:'600',color:'black'}}>Appui à l’hébergement</p>
                                 </div>
-                                <div className="advantage">
-                                    <FaCar className="icon icon-car" />
-                                    <p>Accueil & transfert</p>
+                                <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                    <FaCar style={{fontSize:'50px',color:'red'}} className="icon icon-car" />
+                                    <p style={{fontWeight:'600',color:'black'}}>Accueil & transfert</p>
                                 </div>
-                                <div className="advantage">
-                                    <FaMapLocationDot className="icon icon-map" />
-                                    <p>Visites touristiques</p>
+                                <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                    <FaMapLocationDot style={{fontSize:'50px',color:'red'}} className="icon icon-map" />
+                                    <p style={{fontWeight:'600',color:'black'}}>Visites touristiques</p>
                                 </div>
                             </div>
-                        </div>
+                        
+
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12">
                         <div className="td-sidebar">
                             <div className="widget widget_feature">
-                            <div className="d-flex justify-content-center mg-top-90">
+                                <div className="d-flex justify-content-center mg-top-90">
                                     {/* Boutons pour définir le mode */}
                                     <button
-                                        className={`btn ${modeChoisi === 'Présentiel' ? 'btn-primary' : 'btn-secondary'}`}
+                                        className={`btn ${modeChoisi === 'Présentiel' ? 'btn-primary' : 'btn-secondary'} mx-1`}
                                         onClick={() => setModeChoisi('Présentiel')}
+                                        style={{ width: '130px' }}
                                     >
                                         Présentiel
                                     </button>
                                     <button
-                                        className={`btn ${modeChoisi === 'En ligne' ? 'btn-primary' : 'btn-secondary'}`}
+                                        className={`btn ${modeChoisi === 'En ligne' ? 'btn-primary' : 'btn-secondary'} mx-1`}
                                         onClick={() => setModeChoisi('En ligne')}
                                     >
                                         En ligne
@@ -266,21 +268,22 @@ const CourseDetails = () => {
                                     ) : (
                                         <p>Pas de sessions disponibles.</p>
                                     )}
-                                    <Link to={{pathname:"/Inscription",
-                                        state:{
+                                    <Link to={{
+                                        pathname: "/Inscription",
+                                        state: {
                                             formation,
                                             mode: modeChoisi,
                                         }
                                     }}>
-                                        <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3">
+                                        <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3 mx-3">
                                             S'inscrire
                                         </button>
-                                    </Link> 
+                                    </Link>
                                     <Link to="/FormMesur">
-                                        <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3">
+                                        <button style={{ color: 'white' }} className="btn btn-base btn-radius mt-3 mx-1">
                                             Sur Mesure
                                         </button>
-                                    </Link>                               
+                                    </Link>
                                 </div>
                             </div>
                         </div>
