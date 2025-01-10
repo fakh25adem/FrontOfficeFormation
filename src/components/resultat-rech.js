@@ -111,7 +111,7 @@ const ResultatRech = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container55">
         <div className="row">
             {/* Sidebar */}
             <div className="col-3">

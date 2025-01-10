@@ -163,20 +163,33 @@ const CourseDetails = () => {
                             <h2 >NOS AVANTAGES</h2>
                             <div className=" row mt-2">
                                 <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                <Link to="/VisaPage">
                                     <FaPlane style={{fontSize:'50px',color:'red'}} className="icon icon-plane" />
                                     <p style={{fontWeight:'600',color:'black'}}>Visa</p>
+                                </Link>
                                 </div>
                                 <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                <Link to="/HebegrementPage">
                                     <IoHome style={{fontSize:'50px',color:'red'}} className="icon icon-home" />
                                     <p style={{fontWeight:'600',color:'black'}}>Appui à l’hébergement</p>
+                                    </Link>
+
                                 </div>
                                 <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                <Link to="/AccueilTransfertPage">
+
                                     <FaCar style={{fontSize:'50px',color:'red'}} className="icon icon-car" />
                                     <p style={{fontWeight:'600',color:'black'}}>Accueil & transfert</p>
+                                    </Link>
+
                                 </div>
                                 <div  className=" col-lg-3 col-sm-6 col-md-6 text-center">
+                                <Link to="/VisiteTouristPage">
+
                                     <FaMapLocationDot style={{fontSize:'50px',color:'red'}} className="icon icon-map" />
                                     <p style={{fontWeight:'600',color:'black'}}>Visites touristiques</p>
+                                    </Link>
+
                                 </div>
                             </div>
                         
