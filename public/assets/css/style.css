@@ -2121,6 +2121,7 @@ ul {
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children:hover {
   transition: all 0.4s ease;
+  color: var(--main-color);
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children:hover:before {
@@ -2189,7 +2190,9 @@ ul {
   text-decoration: none;
 
 }
-
+.navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a:hover {
+  color: var(--main-color); /* Change la couleur en passant la souris */
+}
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a:before {
   position: absolute;
   left: 17px;
@@ -2209,11 +2212,6 @@ ul {
   transform: translateY(0);
 }
 
-.navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:hover a {
-  color: #ffffff;
-  list-style: none;
-  margin: 0;
-  padding: 0;}
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:hover a:before {
   visibility: visible;
