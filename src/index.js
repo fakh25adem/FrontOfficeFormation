@@ -27,7 +27,10 @@ import InscriptionEnLigne from './components/inscrit-enligne';
 import CursusForm from './components/cursus-form';
 import ResultatRech from './components/resultat-rech';
 import RechercheResult from './components/recherche-result';
-
+import VisaPage from './components/visa';
+import HebegrementPage from './components/hebegrement';
+import AccueilTransfertPage from './components/accueil-transfert';
+import VisiteTouristPage from './components/visite-touristique';
 class Root extends Component {
     render() {
         return(
@@ -60,6 +63,11 @@ class Root extends Component {
                         <Route exact path="/CursusForm" component={CursusForm} />
                         <Route exact path="/ResultatRech" component={ResultatRech} />
                         <Route exact path="/RechercheResult" component={RechercheResult} />
+                        <Route exact path="/VisaPage" component={VisaPage} />
+                        <Route exact path="/HebegrementPage" component={HebegrementPage} />
+                        <Route exact path="/AccueilTransfertPage" component={AccueilTransfertPage} />
+                        <Route exact path="/VisiteTouristPage" component={VisiteTouristPage} />
+
                     </Switch>
                 </div>
             </Router>

@@ -28,7 +28,7 @@ const NavbarV2 = () => {
               <ul>
                 <li>
                   <p>
-                    <i className="fa fa-phone" /> (+216) 71 90 54 90
+                    <i className="fa fa-phone" /> (+216) 71 90 54 29
                   </p>
                 </li>
                 <li>
