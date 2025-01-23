@@ -105,13 +105,16 @@ const NavbarV2 = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/sousdomaine-dexpertise/2">Oil & Gas</Link>
+                      <Link to="/sousdomaine-dexpertise/2">Mines – Oil & Gas</Link>
                     </li>
                     <li>
-                      <Link to="/sousdomaine-dexpertise/3">Développement durable</Link>
+                      <Link to="/sousdomaine-dexpertise/3">Modélisation et analyse<li> des données</li></Link>
                     </li>
                     <li>
-                      <Link to="/sousdomaine-dexpertise/4">Changement climatique</Link>
+                      <Link to="/sousdomaine-dexpertise/4">Environnement–<li>Développement durable</li><li>et social</li></Link>
+                    </li>
+                    <li>
+                      <Link to="/sousdomaine-dexpertise/13">Infrastructures & gestion<li> urbaine</li></Link>
                     </li>
                   </ul>
                   <ul>
@@ -123,30 +126,38 @@ const NavbarV2 = () => {
                     </li>
                     <li>
                       <Link to="/sousdomaine-dexpertise/7">
-                        Management des <li>ressources humaines</li>
+                        Management des <li>ressources humaines <li>et des organisations</li></li>
                       </Link>
                     </li>
                     <li>
                       <Link to="/sousdomaine-dexpertise/8">
-                        Modernisation de <li>l'administration publique</li>
+                      Finances publiques
                       </Link>
+                    </li>
+                    <li>
+                      <Link to="/sousdomaine-dexpertise/14">Décentralisation &<li> gouvernance locale</li></Link>
                     </li>
                   </ul>
                   <ul>
                     <li>
-                      <Link to="/sousdomaine-dexpertise/9">Finances publiques</Link>
+                      <Link to="/sousdomaine-dexpertise/9">Santé publique</Link>
                     </li>
                     <li>
-                      <Link to="/sousdomaine-dexpertise/10">Santé publique</Link>
+                      <Link to="/sousdomaine-dexpertise/10">Agriculture, nutrition <li>et sécurité alimentaire</li></Link>
                     </li>
                     <li>
                       <Link to="/sousdomaine-dexpertise/11">
-                        Agriculture, nutrition <li>et sécurité alimentaire</li>
+                      Wash (water, sanitation <li>and hygiène)</li>
                       </Link>
                     </li>
                     <li>
                       <Link to="/sousdomaine-dexpertise/12">
-                        Wash (water, sanitation <li>and hygiene)</li>
+                      Education
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/sousdomaine-dexpertise/15">
+                      Informatique – systèmes<li> d’informations – <li>télécommunication</li></li>
                       </Link>
                     </li>
                   </ul>
@@ -159,7 +170,7 @@ const NavbarV2 = () => {
                 <Link to="/blog">Fiches Métiers</Link>
               </li>
               <li className="menu-item-has-children">
-                <Link to="/contact">Cértification</Link>
+                <Link to="/contact">Certification</Link>
               </li>
               <li className="menu-item-has-children">
                 <Link to="/blog">Actualités</Link>
